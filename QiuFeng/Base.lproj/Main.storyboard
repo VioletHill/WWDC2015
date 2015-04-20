@@ -111,67 +111,68 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBo-lA-ePA">
-                                        <rect key="frame" x="278" y="135" width="44" height="70"/>
+                                        <rect key="frame" x="278" y="135" width="44" height="65"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-tD-933">
-                                                <rect key="frame" x="15" y="10" width="15" height="15"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="16" y="10" width="12" height="12"/>
+                                                <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="15" id="q4f-7K-NnE"/>
-                                                    <constraint firstAttribute="height" constant="15" id="uaf-Wz-B8s"/>
+                                                    <constraint firstAttribute="width" constant="12" id="q4f-7K-NnE"/>
+                                                    <constraint firstAttribute="height" constant="12" id="uaf-Wz-B8s"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bc-mQ-zDD">
-                                                <rect key="frame" x="17" y="35" width="10" height="10"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="18" y="32" width="8" height="8"/>
+                                                <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="3jb-ui-XAA"/>
-                                                    <constraint firstAttribute="width" constant="10" id="XeW-yG-x0T"/>
+                                                    <constraint firstAttribute="height" constant="8" id="3jb-ui-XAA"/>
+                                                    <constraint firstAttribute="width" constant="8" id="XeW-yG-x0T"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-hM-F4b">
-                                                <rect key="frame" x="20" y="55" width="5" height="5"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="20" y="50" width="5" height="5"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="5" id="JdI-pd-F1k"/>
                                                     <constraint firstAttribute="height" constant="5" id="a30-4c-hN2"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <real key="value" value="2.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="6wp-qC-0IN"/>
+                                            <constraint firstAttribute="height" constant="65" id="6wp-qC-0IN"/>
                                             <constraint firstAttribute="centerX" secondItem="6gJ-hM-F4b" secondAttribute="centerX" id="Zyd-xH-NE6"/>
                                             <constraint firstAttribute="bottom" secondItem="6gJ-hM-F4b" secondAttribute="bottom" constant="10" id="fcw-5S-64y"/>
                                             <constraint firstItem="DkF-tD-933" firstAttribute="top" secondItem="CBo-lA-ePA" secondAttribute="top" constant="10" id="iGs-Yp-Ze1"/>
-                                            <constraint firstAttribute="centerX" secondItem="2bc-mQ-zDD" secondAttribute="centerX" id="jyv-9u-CzN"/>
                                             <constraint firstAttribute="width" constant="44" id="k94-el-wfU"/>
-                                            <constraint firstAttribute="centerY" secondItem="2bc-mQ-zDD" secondAttribute="centerY" id="nSf-wU-KKS"/>
                                             <constraint firstAttribute="centerX" secondItem="DkF-tD-933" secondAttribute="centerX" id="xRG-5d-Zio"/>
                                             <constraint firstItem="2bc-mQ-zDD" firstAttribute="top" secondItem="DkF-tD-933" secondAttribute="bottom" constant="10" id="xXu-wn-Hwe"/>
                                             <constraint firstAttribute="centerX" secondItem="2bc-mQ-zDD" secondAttribute="centerX" id="xpg-dF-Gja"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="jyv-9u-CzN"/>
-                                                <exclude reference="nSf-wU-KKS"/>
-                                            </mask>
-                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="Ygr-qs-l4n" secondAttribute="centerX" id="6m2-Rh-CKb"/>
-                                    <constraint firstAttribute="bottom" secondItem="CBo-lA-ePA" secondAttribute="bottom" constant="20" id="LBE-SH-hQ7"/>
-                                    <constraint firstItem="CBo-lA-ePA" firstAttribute="top" secondItem="Ygr-qs-l4n" secondAttribute="bottom" constant="10" id="O3B-OG-Ifk"/>
+                                    <constraint firstAttribute="bottom" secondItem="CBo-lA-ePA" secondAttribute="bottom" constant="25" id="LBE-SH-hQ7"/>
                                     <constraint firstAttribute="centerY" secondItem="Ygr-qs-l4n" secondAttribute="centerY" constant="20" id="Ury-cM-Hl8"/>
                                     <constraint firstAttribute="centerX" secondItem="CBo-lA-ePA" secondAttribute="centerX" id="uf4-eZ-vuH"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="O3B-OG-Ifk"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
