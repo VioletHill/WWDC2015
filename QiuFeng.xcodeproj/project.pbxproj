@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		A59CA9D4CF68CF370CF30C12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6817DFD0D4FE5D283458D75 /* libPods.a */; };
+		F36BBF141AE621AD00257658 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF131AE621AD00257658 /* Array+Ext.swift */; };
+		F36BBF161AE6245600257658 /* QFProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF151AE6245600257658 /* QFProjectViewController.swift */; };
+		F36BBF181AE6369900257658 /* QFDashboardPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */; };
+		F36BBF1A1AE63EB400257658 /* QFSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF191AE63EB400257658 /* QFSkillViewController.swift */; };
+		F36BBF1C1AE63F4A00257658 /* QFExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */; };
+		F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */; };
 		F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4C31AE5595C009A8507 /* AppDelegate.swift */; };
-		F399D4C61AE5595C009A8507 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4C51AE5595C009A8507 /* ViewController.swift */; };
 		F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F399D4C71AE5595C009A8507 /* Main.storyboard */; };
 		F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CA1AE5595C009A8507 /* Images.xcassets */; };
 		F399D4CE1AE5595C009A8507 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */; };
 		F399D4DA1AE5595C009A8507 /* QiuFengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4D91AE5595C009A8507 /* QiuFengTests.swift */; };
+		F399D4EA1AE5F2C5009A8507 /* QFDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */; };
+		F3D75F9A1AE6095A00F5A66B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D75F991AE6095A00F5A66B /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +37,24 @@
 		AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6817DFD0D4FE5D283458D75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36BBF131AE621AD00257658 /* Array+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		F36BBF151AE6245600257658 /* QFProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFProjectViewController.swift; sourceTree = "<group>"; };
+		F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFDashboardPushAnimator.swift; sourceTree = "<group>"; };
+		F36BBF191AE63EB400257658 /* QFSkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFSkillViewController.swift; sourceTree = "<group>"; };
+		F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFExperienceViewController.swift; sourceTree = "<group>"; };
+		F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFPersonalViewController.swift; sourceTree = "<group>"; };
 		F399D4BE1AE5595C009A8507 /* QiuFeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiuFeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F399D4C21AE5595C009A8507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F399D4C31AE5595C009A8507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F399D4C51AE5595C009A8507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F399D4C81AE5595C009A8507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F399D4CA1AE5595C009A8507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F399D4CD1AE5595C009A8507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F399D4D31AE5595C009A8507 /* QiuFengTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiuFengTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F399D4D81AE5595C009A8507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F399D4D91AE5595C009A8507 /* QiuFengTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiuFengTests.swift; sourceTree = "<group>"; };
+		F399D4E51AE5F276009A8507 /* QiuFeng-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QiuFeng-Bridging-Header.h"; sourceTree = "<group>"; };
+		F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFDashboardViewController.swift; sourceTree = "<group>"; };
+		F3D75F991AE6095A00F5A66B /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +93,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F36BBF121AE6218500257658 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3D75F991AE6095A00F5A66B /* UIColor+Ext.swift */,
+				F36BBF131AE621AD00257658 /* Array+Ext.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		F399D4B51AE5595C009A8507 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +125,18 @@
 		F399D4C01AE5595C009A8507 /* QiuFeng */ = {
 			isa = PBXGroup;
 			children = (
+				F36BBF121AE6218500257658 /* Extension */,
 				F399D4C31AE5595C009A8507 /* AppDelegate.swift */,
-				F399D4C51AE5595C009A8507 /* ViewController.swift */,
+				F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */,
+				F36BBF151AE6245600257658 /* QFProjectViewController.swift */,
+				F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */,
+				F36BBF191AE63EB400257658 /* QFSkillViewController.swift */,
+				F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */,
+				F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */,
 				F399D4C71AE5595C009A8507 /* Main.storyboard */,
 				F399D4CA1AE5595C009A8507 /* Images.xcassets */,
 				F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */,
+				F399D4E51AE5F276009A8507 /* QiuFeng-Bridging-Header.h */,
 				F399D4C11AE5595C009A8507 /* Supporting Files */,
 			);
 			path = QiuFeng;
@@ -271,8 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F399D4C61AE5595C009A8507 /* ViewController.swift in Sources */,
+				F3D75F9A1AE6095A00F5A66B /* UIColor+Ext.swift in Sources */,
+				F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */,
+				F36BBF161AE6245600257658 /* QFProjectViewController.swift in Sources */,
+				F36BBF1C1AE63F4A00257658 /* QFExperienceViewController.swift in Sources */,
+				F36BBF141AE621AD00257658 /* Array+Ext.swift in Sources */,
 				F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */,
+				F36BBF1A1AE63EB400257658 /* QFSkillViewController.swift in Sources */,
+				F36BBF181AE6369900257658 /* QFDashboardPushAnimator.swift in Sources */,
+				F399D4EA1AE5F2C5009A8507 /* QFDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +392,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -391,6 +430,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -400,10 +440,13 @@
 			baseConfigurationReference = AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = QiuFeng/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QiuFeng/QiuFeng-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +455,12 @@
 			baseConfigurationReference = B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = QiuFeng/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QiuFeng/QiuFeng-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -432,6 +477,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = QiuFengTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiuFeng.app/QiuFeng";
@@ -447,6 +493,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = QiuFengTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiuFeng.app/QiuFeng";
