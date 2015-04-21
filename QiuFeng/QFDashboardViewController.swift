@@ -234,6 +234,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToPersonal(sender: UIButton) {
         let personalViewController: QFPersonalViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFPersonalViewController") as! QFPersonalViewController
         if let nav = self.navigationController {
+            nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
             nav.pushViewController(personalViewController, animated: true)
         }
     }
