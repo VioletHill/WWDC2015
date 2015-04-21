@@ -24,6 +24,21 @@ class QFDashboardPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 fromView = fromController.projectButton
             }
         }
+        else if let toViewController = to as? QFExperienceViewController {
+            if let fromController = from as? QFDashboardViewController {
+                fromView = fromController.experienceButton
+            }
+        }
+        else if let toViewController = to as? QFSkillViewController {
+            if let fromController = from as? QFDashboardViewController {
+                fromView = fromController.skillButton
+            }
+        }
+        else if let toViewController = to as? QFPersonalViewController {
+            if let fromController = from as? QFDashboardViewController {
+                fromView = fromController.personalButton
+            }
+        }
         else {
             fromView = from?.view
         }
@@ -34,12 +49,10 @@ class QFDashboardPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
         
         UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { () -> Void in
-                //from?.view.transform = CGAffineTransformMakeScale(2.0, 2.0)
-                fromView?.transform = CGAffineTransformMakeScale(3.0, 3.0)
+                fromView?.transform = CGAffineTransformMakeScale(5.0, 5.0)
                 to?.view.alpha = 1
             },
             completion: { (finish: Bool) -> Void in
-               // from?.view.transform = CGAffineTransformIdentity
                 fromView?.transform = CGAffineTransformIdentity
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         })

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 TongjiUniversity. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class QFExperienceViewController: UIViewController {
 

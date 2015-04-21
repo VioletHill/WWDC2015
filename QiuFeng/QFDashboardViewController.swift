@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UIViewControllerAnimatedTransitioning {
+class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var dashboardAvatarImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -16,20 +16,21 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     @IBOutlet weak var page2View: UIView!
     
     let pushAnimator = QFDashboardPushAnimator()
+    let popAnimator = QFDashboardPopAnimator()
     
     //MARK: - Life Circle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Hide Status bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         self.edgesForExtendedLayout = UIRectEdge.None;
         self.navigationController?.delegate = self
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
     }
     
@@ -39,8 +40,8 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }
     
     override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,6 +83,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         skill.setTitle("Skill", forState: UIControlState.Normal)
         skill.backgroundColor = UIColor.appGreenColor()
         skill.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        skill.addTarget(self, action: "pushToSkill:", forControlEvents: UIControlEvents.TouchUpInside)
         return skill
     }()
     
@@ -104,6 +106,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         experience.setTitle("Experience", forState: UIControlState.Normal)
         experience.backgroundColor = UIColor.appOrangeColor()
         experience.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        experience.addTarget(self, action: "pushToExperience:", forControlEvents: UIControlEvents.TouchUpInside)
         return experience
     }()
     
@@ -126,6 +129,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         personal.setTitle("Personal", forState: UIControlState.Normal)
         personal.backgroundColor = UIColor.appDarkGrayColor()
         personal.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        personal.addTarget(self, action: "pushToPersonal:", forControlEvents: UIControlEvents.TouchUpInside)
         return personal
     }()
     
@@ -191,17 +195,13 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     // MARK: - UIViewControllerAnimatedTransitioning Delegate
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 1
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
-    }
-    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == UINavigationControllerOperation.Push {
             return self.pushAnimator
+        }
+        else if operation == UINavigationControllerOperation.Pop {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            return self.popAnimator
         }
         else {
             return nil
@@ -211,10 +211,30 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     // MARK: - UIActionEvent
     func pushToProject(sender: UIButton) {
-        print("push to Project")
         let projectViewController: QFProjectViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFProjectViewController") as! QFProjectViewController
         if let nav = self.navigationController {
             nav.pushViewController(projectViewController, animated: true)
+        }
+    }
+    
+    func pushToSkill(sender: UIButton) {
+        let skillViewController: QFSkillViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFSkillViewController") as! QFSkillViewController
+        if let nav = self.navigationController {
+            nav.pushViewController(skillViewController, animated: true)
+        }
+    }
+    
+    func pushToExperience(sender: UIButton) {
+        let experienceViewController: QFExperienceViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFExperienceViewController") as! QFExperienceViewController
+        if let nav = self.navigationController {
+            nav.pushViewController(experienceViewController, animated: true)
+        }
+    }
+    
+    func pushToPersonal(sender: UIButton) {
+        let personalViewController: QFPersonalViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFPersonalViewController") as! QFPersonalViewController
+        if let nav = self.navigationController {
+            nav.pushViewController(personalViewController, animated: true)
         }
     }
 }
