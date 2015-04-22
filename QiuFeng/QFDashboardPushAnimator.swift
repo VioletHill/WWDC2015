@@ -53,6 +53,7 @@ class QFDashboardPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 to?.view.alpha = 1
             },
             completion: { (finish: Bool) -> Void in
+
                 fromView?.transform = CGAffineTransformIdentity
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         })

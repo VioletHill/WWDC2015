@@ -22,12 +22,8 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Hide Status bar
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-
-        self.edgesForExtendedLayout = UIRectEdge.None;
-        self.navigationController?.delegate = self
-        // Do any additional setup after loading the view.
+        
+        configNavigationBar()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +45,17 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - navigation bar
+    
+    func configNavigationBar() {
+        // Hide Status bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        self.edgesForExtendedLayout = UIRectEdge.None;
+        self.navigationController?.delegate = self
+    }
     
     // MARK: - Project Button
     
@@ -213,6 +220,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToProject(sender: UIButton) {
         let projectViewController: QFProjectViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFProjectViewController") as! QFProjectViewController
         if let nav = self.navigationController {
+            nav.navigationBar.barTintColor = UIColor.appBlueColor()
             nav.pushViewController(projectViewController, animated: true)
         }
     }
@@ -220,6 +228,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToSkill(sender: UIButton) {
         let skillViewController: QFSkillViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFSkillViewController") as! QFSkillViewController
         if let nav = self.navigationController {
+            nav.navigationBar.barTintColor = UIColor.appGreenColor()
             nav.pushViewController(skillViewController, animated: true)
         }
     }
@@ -227,6 +236,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToExperience(sender: UIButton) {
         let experienceViewController: QFExperienceViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFExperienceViewController") as! QFExperienceViewController
         if let nav = self.navigationController {
+            nav.navigationBar.barTintColor = UIColor.appOrangeColor()
             nav.pushViewController(experienceViewController, animated: true)
         }
     }

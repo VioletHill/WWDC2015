@@ -9,5 +9,7 @@
 import UIKit
 
 class QFPersonalViewController: UIViewController {
-
+    override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.appDarkGrayColor()
+    }
 }

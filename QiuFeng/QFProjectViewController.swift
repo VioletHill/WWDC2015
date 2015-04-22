@@ -9,8 +9,12 @@
 import UIKit
 
 class QFProjectViewController: UIViewController {
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.backgroundColor = UIColor.appBlueColor()
+        
+        
     }
     
     override func viewWillDisappear(animated: Bool) {

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A59CA9D4CF68CF370CF30C12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6817DFD0D4FE5D283458D75 /* libPods.a */; };
+		F305B2D81AE7F19400ED7F73 /* QFExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2D71AE7F19400ED7F73 /* QFExperience.swift */; };
+		F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = F305B2D91AE7F32800ED7F73 /* QFExperience.plist */; };
+		F305B2DC1AE7F5EF00ED7F73 /* QFExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */; };
+		F305B2DE1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2DD1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift */; };
+		F305B2E41AE805E600ED7F73 /* CALayer+XibConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2E31AE805E600ED7F73 /* CALayer+XibConfig.swift */; };
 		F36BBF141AE621AD00257658 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF131AE621AD00257658 /* Array+Ext.swift */; };
 		F36BBF161AE6245600257658 /* QFProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF151AE6245600257658 /* QFProjectViewController.swift */; };
 		F36BBF181AE6369900257658 /* QFDashboardPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */; };
@@ -38,6 +43,11 @@
 		AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6817DFD0D4FE5D283458D75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F305B2D71AE7F19400ED7F73 /* QFExperience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFExperience.swift; sourceTree = "<group>"; };
+		F305B2D91AE7F32800ED7F73 /* QFExperience.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QFExperience.plist; sourceTree = "<group>"; };
+		F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFExperienceManager.swift; sourceTree = "<group>"; };
+		F305B2DD1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFEexperienceTableViewCell.swift; sourceTree = "<group>"; };
+		F305B2E31AE805E600ED7F73 /* CALayer+XibConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+XibConfig.swift"; sourceTree = "<group>"; };
 		F36BBF131AE621AD00257658 /* Array+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		F36BBF151AE6245600257658 /* QFProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFProjectViewController.swift; sourceTree = "<group>"; };
 		F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFDashboardPushAnimator.swift; sourceTree = "<group>"; };
@@ -95,11 +105,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F305B2D51AE7F16900ED7F73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */,
+				F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */,
+				F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */,
+				F36BBF151AE6245600257658 /* QFProjectViewController.swift */,
+				F36BBF191AE63EB400257658 /* QFSkillViewController.swift */,
+				F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */,
+				F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F305B2D61AE7F17A00ED7F73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F305B2D71AE7F19400ED7F73 /* QFExperience.swift */,
+				F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */,
+				F305B2DD1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift */,
+				F305B2D91AE7F32800ED7F73 /* QFExperience.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F36BBF121AE6218500257658 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				F3D75F991AE6095A00F5A66B /* UIColor+Ext.swift */,
 				F36BBF131AE621AD00257658 /* Array+Ext.swift */,
+				F305B2E31AE805E600ED7F73 /* CALayer+XibConfig.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -127,15 +163,10 @@
 		F399D4C01AE5595C009A8507 /* QiuFeng */ = {
 			isa = PBXGroup;
 			children = (
+				F305B2D61AE7F17A00ED7F73 /* Model */,
+				F305B2D51AE7F16900ED7F73 /* Controller */,
 				F36BBF121AE6218500257658 /* Extension */,
 				F399D4C31AE5595C009A8507 /* AppDelegate.swift */,
-				F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */,
-				F36BBF171AE6369900257658 /* QFDashboardPushAnimator.swift */,
-				F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */,
-				F36BBF151AE6245600257658 /* QFProjectViewController.swift */,
-				F36BBF191AE63EB400257658 /* QFSkillViewController.swift */,
-				F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */,
-				F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */,
 				F399D4C71AE5595C009A8507 /* Main.storyboard */,
 				F399D4CA1AE5595C009A8507 /* Images.xcassets */,
 				F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */,
@@ -255,6 +286,7 @@
 				F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */,
 				F399D4CE1AE5595C009A8507 /* LaunchScreen.xib in Resources */,
 				F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */,
+				F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +339,18 @@
 			files = (
 				F3D75F9A1AE6095A00F5A66B /* UIColor+Ext.swift in Sources */,
 				F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */,
+				F305B2DE1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift in Sources */,
 				F36BBF161AE6245600257658 /* QFProjectViewController.swift in Sources */,
 				F36BBF1C1AE63F4A00257658 /* QFExperienceViewController.swift in Sources */,
 				F36BBF141AE621AD00257658 /* Array+Ext.swift in Sources */,
 				F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */,
 				F36BBF201AE642C700257658 /* QFDashboardPopAnimator.swift in Sources */,
+				F305B2D81AE7F19400ED7F73 /* QFExperience.swift in Sources */,
 				F36BBF1A1AE63EB400257658 /* QFSkillViewController.swift in Sources */,
 				F36BBF181AE6369900257658 /* QFDashboardPushAnimator.swift in Sources */,
+				F305B2DC1AE7F5EF00ED7F73 /* QFExperienceManager.swift in Sources */,
 				F399D4EA1AE5F2C5009A8507 /* QFDashboardViewController.swift in Sources */,
+				F305B2E41AE805E600ED7F73 /* CALayer+XibConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
