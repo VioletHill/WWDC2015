@@ -11,6 +11,7 @@ import UIKit
 class QFExperienceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timeNodeLine: QFTimeNodeLine!
     
     let data: [[QFExperience]] =  QFExperienceManager.sharedExperienceManager().getExperience()
     
@@ -24,7 +25,17 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
         let footerView: UIView = UIView(frame: CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height / CGFloat(2)));
         footerView.backgroundColor = UIColor.clearColor()
         self.tableView.tableFooterView = footerView
+        
+        self.timeNodeLine.setNeedsDisplay()
     }
+    
+    
+    //MARK - Layout
+    
+    @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
+    
+    
+    //MARK - TablView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return cellHeight
@@ -45,22 +56,15 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
-    }
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.clearColor()
-        return view
-    }
-    
+        
     func setCellAlpha(cell: UITableViewCell) {
         
         let showItem = 2
         let itemOffset = CGFloat(showItem) * CGFloat(cellHeight)
-        cell.alpha = 1 - fabs(( cell.frame.origin.y - tableView.contentOffset.y - itemOffset) / tableView.frame.size.height) * 2
+        let alpha = 1 - fabs(( cell.frame.origin.y - tableView.contentOffset.y - itemOffset) / tableView.frame.size.height) * 2
+        if let experienceCell = cell as? QFEexperienceTableViewCell {
+            experienceCell.setCellAlpha(alpha)
+        }
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
