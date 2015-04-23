@@ -478,16 +478,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMO-as-jKk">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="244"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3q2-LJ-n7c">
-                                        <rect key="frame" x="0.0" y="44" width="600" height="106"/>
+                                        <rect key="frame" x="0.0" y="44" width="600" height="200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="1Yo-zu-5co">
-                                                <rect key="frame" x="75" y="10" width="50" height="50"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="1Yo-zu-5co">
+                                                <rect key="frame" x="50" y="20" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="1Ed-98-T9a"/>
                                                     <constraint firstAttribute="width" secondItem="1Yo-zu-5co" secondAttribute="height" multiplier="1:1" id="1G5-UH-k0U"/>
+                                                    <constraint firstAttribute="width" constant="100" id="kkm-pV-724"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -500,52 +500,59 @@
                                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="1Ed-98-T9a"/>
-                                                    </mask>
-                                                </variation>
                                             </imageView>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87z-QU-pPG" userLabel="bottomContainer">
-                                                <rect key="frame" x="0.0" y="80" width="600" height="26"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87z-QU-pPG" userLabel="bottomContainer">
+                                                <rect key="frame" x="0.0" y="140" width="600" height="60"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="tE1-K5-i8c">
-                                                        <rect key="frame" x="87" y="0.0" width="26" height="26"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="tE1-K5-i8c">
+                                                        <rect key="frame" x="70" y="0.0" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="tE1-K5-i8c" secondAttribute="height" multiplier="1:1" id="bcs-dm-lST"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-ZD-cto">
-                                                        <rect key="frame" x="113" y="0.0" width="122" height="27"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-ZD-cto">
+                                                        <rect key="frame" x="130" y="17" width="118" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2015">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="yearPress:" destination="0hw-DB-dBj" eventType="touchUpInside" id="fTY-s7-1mI"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfu-sE-kOP">
-                                                        <rect key="frame" x="235" y="0.0" width="122" height="27"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <state key="normal" title="2014">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSA-ig-1V1">
-                                                        <rect key="frame" x="357" y="0.0" width="121" height="27"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSA-ig-1V1">
+                                                        <rect key="frame" x="365" y="17" width="118" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2013">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="yearPress:" destination="0hw-DB-dBj" eventType="touchUpInside" id="Pjd-za-8eb"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-k2-ICK">
-                                                        <rect key="frame" x="478" y="0.0" width="122" height="27"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-k2-ICK">
+                                                        <rect key="frame" x="483" y="17" width="117" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2012">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="yearPress:" destination="0hw-DB-dBj" eventType="touchUpInside" id="V00-mP-BNm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfu-sE-kOP">
+                                                        <rect key="frame" x="248" y="17" width="117" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <state key="normal" title="2014">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="yearPress:" destination="0hw-DB-dBj" eventType="touchUpInside" id="Uu3-OB-Q1M"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -575,7 +582,8 @@
                                             <constraint firstAttribute="trailing" secondItem="87z-QU-pPG" secondAttribute="trailing" id="3DP-qm-iai"/>
                                             <constraint firstItem="1Yo-zu-5co" firstAttribute="centerX" secondItem="tE1-K5-i8c" secondAttribute="centerX" id="Zl6-vU-ioR"/>
                                             <constraint firstAttribute="bottom" secondItem="87z-QU-pPG" secondAttribute="bottom" id="gU7-JL-Uj0"/>
-                                            <constraint firstItem="1Yo-zu-5co" firstAttribute="top" secondItem="3q2-LJ-n7c" secondAttribute="top" constant="10" id="lIf-je-LXn"/>
+                                            <constraint firstItem="1Yo-zu-5co" firstAttribute="top" secondItem="3q2-LJ-n7c" secondAttribute="top" constant="20" id="lIf-je-LXn"/>
+                                            <constraint firstAttribute="height" constant="200" id="mlh-0y-3rj"/>
                                             <constraint firstItem="87z-QU-pPG" firstAttribute="leading" secondItem="3q2-LJ-n7c" secondAttribute="leading" id="mlh-lk-WMO"/>
                                             <constraint firstItem="87z-QU-pPG" firstAttribute="top" secondItem="1Yo-zu-5co" secondAttribute="bottom" constant="20" id="rTt-A4-rdk"/>
                                         </constraints>
@@ -585,19 +593,13 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3q2-LJ-n7c" secondAttribute="bottom" id="JPp-7g-eAH"/>
                                     <constraint firstAttribute="trailing" secondItem="3q2-LJ-n7c" secondAttribute="trailing" id="JuQ-rx-TcX"/>
-                                    <constraint firstAttribute="height" constant="150" id="by1-Zj-jP8"/>
                                     <constraint firstItem="3q2-LJ-n7c" firstAttribute="leading" secondItem="CMO-as-jKk" secondAttribute="leading" id="eXu-XX-bM4"/>
                                     <constraint firstItem="3q2-LJ-n7c" firstAttribute="top" secondItem="CMO-as-jKk" secondAttribute="top" constant="44" id="iKv-hJ-AnZ"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iNc-cy-21l">
-                                <rect key="frame" x="0.0" y="150" width="600" height="386"/>
+                                <rect key="frame" x="0.0" y="244" width="600" height="292"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="dnk-Kg-iKt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QFEexperienceTableViewCell" rowHeight="80" id="Fih-CR-y3P" customClass="QFEexperienceTableViewCell" customModule="QiuFeng" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -697,9 +699,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vtl-U9-IeB"/>
                     <connections>
-                        <outlet property="avatarWidthConstraint" destination="1Ed-98-T9a" id="rEC-Ez-qSv"/>
+                        <outlet property="avatarImageView" destination="1Yo-zu-5co" id="jbz-bX-55s"/>
+                        <outlet property="avatarWidthConstraint" destination="kkm-pV-724" id="MSt-vc-fzF"/>
                         <outlet property="tableView" destination="iNc-cy-21l" id="q37-cL-0Hp"/>
                         <outlet property="timeNodeLine" destination="Qiw-Q9-HaE" id="U1N-DS-pNj"/>
+                        <outlet property="topViewHeightConstraint" destination="mlh-0y-3rj" id="bbh-MN-9WE"/>
+                        <outlet property="year2013Button" destination="vSA-ig-1V1" id="P93-UZ-i4e"/>
+                        <outlet property="year2014Button" destination="Wfu-sE-kOP" id="gbV-8j-ySz"/>
+                        <outlet property="year2015Button" destination="GxN-ZD-cto" id="TOz-U4-a1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvz-ep-Ryw" userLabel="First Responder" sceneMemberID="firstResponder"/>

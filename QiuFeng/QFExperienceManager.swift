@@ -47,4 +47,8 @@ class QFExperienceManager: NSObject {
         
         return splitExperienceByYear(result)
     }
+    
+    func generalEmptyExperience() ->QFExperience {
+        return QFExperience()
+    }
 }

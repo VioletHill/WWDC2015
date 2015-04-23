@@ -12,20 +12,40 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var timeNodeLine: QFTimeNodeLine!
+    @IBOutlet weak var avatarImageView: UIImageView!
     
-    let data: [[QFExperience]] =  QFExperienceManager.sharedExperienceManager().getExperience()
+    var data: [[QFExperience]] =  QFExperienceManager.sharedExperienceManager().getExperience()
     
     let cellHeight: CGFloat = 80.0
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.orangeColor()
+        
+        var firstEmpty: [QFExperience] = []
+        for i in 1...2 {
+            firstEmpty.insert(QFExperienceManager.sharedExperienceManager().generalEmptyExperience(), atIndex: 0)
+        }
+        data.insert(firstEmpty, atIndex: 0)
+        
+        var lastEmpty: [QFExperience] = []
+        let lastCount: Int
+        if DeviceType.IS_IPHONE_6P {
+            lastCount = 3
+        }
+        else {
+            lastCount = 1
+        }
+        
+        for i in 1...lastCount {
+            lastEmpty.insert(QFExperienceManager.sharedExperienceManager().generalEmptyExperience(), atIndex: 0)
+        }
+        data.append(lastEmpty)
+        
+        setupLayout()
     }
     
     override func viewWillAppear(animated: Bool) {
-        let footerView: UIView = UIView(frame: CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height / CGFloat(2)));
-        footerView.backgroundColor = UIColor.clearColor()
-        self.tableView.tableFooterView = footerView
-        
+
         self.timeNodeLine.setNeedsDisplay()
     }
     
@@ -34,6 +54,14 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
+    
+    func setupLayout() {
+        let width = UIScreen.mainScreen().bounds.height / 10
+        self.avatarWidthConstraint.constant = width
+        self.avatarImageView.layer.cornerRadius = width / 2
+        self.topViewHeightConstraint.constant = UIScreen.mainScreen().bounds.height / 4
+    }
     
     //MARK - TablView
     
@@ -79,4 +107,14 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
     }
+   
+    @IBOutlet weak var year2015Button: UIButton!
+    @IBOutlet weak var year2014Button: UIButton!
+    @IBOutlet weak var year2013Button: UIButton!
+    @IBOutlet weak var year2012Button: UIButton!
+    
+    @IBAction func yearPress(sender: UIButton) {
+    }
+    
+    
 }

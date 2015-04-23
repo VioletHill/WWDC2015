@@ -17,7 +17,7 @@ class QFTimeNodeLine: UIView {
         let gradient: CGGradientRef = CGGradientCreateWithColors(colorspace, colors, locations)
        
         let startPoint : CGPoint = CGPointMake(0, 0)
-        let endPoint : CGPoint = CGPointMake(0,500)
+        let endPoint : CGPoint = CGPointMake(0, self.frame.size.height)
         CGContextDrawLinearGradient(context, gradient,startPoint, endPoint, 0);
     }
 }

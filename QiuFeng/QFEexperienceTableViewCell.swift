@@ -28,6 +28,12 @@ class QFEexperienceTableViewCell: UITableViewCell {
     }
     
     func setCellWithExperience(experience: QFExperience) {
+        if experience.year == 0 {
+            timeNode.hidden = true
+        }
+        else {
+            timeNode.hidden = false
+        }
         monthLabel.text = experience.month
         eventLabel.text = experience.event
     }

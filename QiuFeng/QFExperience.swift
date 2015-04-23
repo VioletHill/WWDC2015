@@ -13,6 +13,11 @@ class QFExperience: NSObject {
     var month: String!
     var event: String!
     
+    override init() {
+        year = 0
+        month = ""
+        event = ""
+    }
     
     init(experenceDic:[String: AnyObject]) {
         year = experenceDic["year"] as! Int
