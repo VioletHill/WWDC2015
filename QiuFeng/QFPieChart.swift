@@ -10,6 +10,7 @@ import UIKit
 
 protocol QFPieChartDelegate {
     func percentageOfPieChart(pieChart: QFPieChart) -> Int
+    func lineWidthOfPieChart(pieChart: QFPieChart) -> CGFloat
 }
 
 class QFPieChart: UIView {
@@ -27,7 +28,13 @@ class QFPieChart: UIView {
         }
         
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetLineWidth(context, 5)
+        let width = self.delegate?.lineWidthOfPieChart(self)
+        if let lineWidth = width {
+            CGContextSetLineWidth(context, lineWidth)
+        }
+        else {
+            CGContextSetLineWidth(context, 1)
+        }
         UIColor.whiteColor().set()
         
         let percentage = delegate?.percentageOfPieChart(self)
