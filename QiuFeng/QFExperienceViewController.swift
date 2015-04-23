@@ -90,7 +90,16 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
         let showItem = 2
         let itemOffset = CGFloat(showItem) * CGFloat(cellHeight)
         let alpha = 1 - fabs(( cell.frame.origin.y - tableView.contentOffset.y - itemOffset) / tableView.frame.size.height) * 2
+        
         if let experienceCell = cell as? QFEexperienceTableViewCell {
+            let indexPath = tableView.indexPathForCell(cell) as NSIndexPath?
+            if  let index = indexPath  {
+                let experience = data[index.section][index.row]
+                if alpha >= 0.9 {
+                    setTitleBlod(experience.year)
+                }
+            }
+            
             experienceCell.setCellAlpha(alpha)
         }
     }
@@ -114,7 +123,44 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var year2012Button: UIButton!
     
     @IBAction func yearPress(sender: UIButton) {
+        setButtonFont(sender)
+        
+        if sender == self.year2015Button {
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }
+        else if sender == self.year2014Button {
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection:0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }
+        else if sender == self.year2013Button {
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.data[2].count - 2, inSection:2), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }
+        else if sender == self.year2012Button {
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.data[3].count - 2, inSection:3), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }
     }
     
+    func setButtonFont(sender: UIButton) {
+        self.year2015Button.titleLabel?.font = UIFont.systemFontOfSize(12)
+        self.year2014Button.titleLabel?.font = UIFont.systemFontOfSize(12)
+        self.year2013Button.titleLabel?.font = UIFont.systemFontOfSize(12)
+        self.year2012Button.titleLabel?.font = UIFont.systemFontOfSize(12)
+
+        sender.titleLabel?.font = UIFont.boldSystemFontOfSize(16)
+    }
     
+    func setTitleBlod(year: Int) {
+
+        if year == 2015 {
+            setButtonFont(self.year2015Button)
+        }
+        else if year == 2014 {
+            setButtonFont(self.year2014Button)
+        }
+        else if year == 2013 {
+            setButtonFont(self.year2013Button)
+        }
+        else if year == 2012 {
+            setButtonFont(self.year2012Button)
+        }
+    }
 }

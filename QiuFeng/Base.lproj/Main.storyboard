@@ -510,9 +510,9 @@
                                                             <constraint firstAttribute="width" secondItem="tE1-K5-i8c" secondAttribute="height" multiplier="1:1" id="bcs-dm-lST"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-ZD-cto">
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-ZD-cto">
                                                         <rect key="frame" x="130" y="17" width="118" height="27"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <state key="normal" title="2015">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -522,7 +522,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSA-ig-1V1">
-                                                        <rect key="frame" x="365" y="17" width="118" height="27"/>
+                                                        <rect key="frame" x="355" y="17" width="113" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2013">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -533,7 +533,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-k2-ICK">
-                                                        <rect key="frame" x="483" y="17" width="117" height="27"/>
+                                                        <rect key="frame" x="468" y="17" width="112" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2012">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -544,7 +544,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfu-sE-kOP">
-                                                        <rect key="frame" x="248" y="17" width="117" height="27"/>
+                                                        <rect key="frame" x="243" y="17" width="112" height="27"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="2014">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -563,7 +563,7 @@
                                                     <constraint firstItem="l1r-k2-ICK" firstAttribute="width" secondItem="GxN-ZD-cto" secondAttribute="width" id="Bdl-CJ-cS6"/>
                                                     <constraint firstItem="vSA-ig-1V1" firstAttribute="leading" secondItem="Wfu-sE-kOP" secondAttribute="trailing" id="CZU-xB-MCk"/>
                                                     <constraint firstItem="l1r-k2-ICK" firstAttribute="leading" secondItem="vSA-ig-1V1" secondAttribute="trailing" id="EN9-6Q-c78"/>
-                                                    <constraint firstAttribute="trailing" secondItem="l1r-k2-ICK" secondAttribute="trailing" id="FFa-dH-HKu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l1r-k2-ICK" secondAttribute="trailing" constant="20" id="FFa-dH-HKu"/>
                                                     <constraint firstAttribute="bottom" secondItem="tE1-K5-i8c" secondAttribute="bottom" id="Lll-4X-nhV"/>
                                                     <constraint firstItem="l1r-k2-ICK" firstAttribute="width" secondItem="vSA-ig-1V1" secondAttribute="width" id="MdS-cT-mlP"/>
                                                     <constraint firstAttribute="centerY" secondItem="Wfu-sE-kOP" secondAttribute="centerY" id="N17-RF-bbF"/>
@@ -704,6 +704,7 @@
                         <outlet property="tableView" destination="iNc-cy-21l" id="q37-cL-0Hp"/>
                         <outlet property="timeNodeLine" destination="Qiw-Q9-HaE" id="U1N-DS-pNj"/>
                         <outlet property="topViewHeightConstraint" destination="mlh-0y-3rj" id="bbh-MN-9WE"/>
+                        <outlet property="year2012Button" destination="l1r-k2-ICK" id="mtT-bK-IS9"/>
                         <outlet property="year2013Button" destination="vSA-ig-1V1" id="P93-UZ-i4e"/>
                         <outlet property="year2014Button" destination="Wfu-sE-kOP" id="gbV-8j-ySz"/>
                         <outlet property="year2015Button" destination="GxN-ZD-cto" id="TOz-U4-a1f"/>
