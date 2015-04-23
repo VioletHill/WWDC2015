@@ -14,11 +14,9 @@ class QFProjectViewController: UIViewController {
         super.viewWillAppear(animated)
         self.view.backgroundColor = UIColor.appBlueColor()
         
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
-
         super.viewWillDisappear(animated)
     }
 }

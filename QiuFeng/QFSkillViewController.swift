@@ -8,6 +8,20 @@
 
 import UIKit
 
-class QFSkillViewController: UIViewController {
+class QFSkillViewController: UIViewController, QFPieChartDelegate {
 
+    @IBOutlet weak var pieChart: QFPieChart!
+    
+    override func viewDidLoad() {
+        
+        pieChart.delegate = self
+        pieChart.startDraw()
+        
+        self.view.backgroundColor = UIColor.appGreenColor()
+        self.pieChart.backgroundColor = UIColor.clearColor()
+    }
+    
+    func percentageOfPieChart(pieChart: QFPieChart) -> Int {
+        return 50
+    }
 }

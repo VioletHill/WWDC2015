@@ -19,6 +19,7 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
     let cellHeight: CGFloat = 80.0
     
     override func viewDidLoad() {
+        self.title = "Experience"
         self.view.backgroundColor = UIColor.orangeColor()
         
         var firstEmpty: [QFExperience] = []

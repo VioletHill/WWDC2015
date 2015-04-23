@@ -13,6 +13,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     @IBOutlet weak var dashboardAvatarImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var avatarContainerView: UIView!
     @IBOutlet weak var page2View: UIView!
     
     let pushAnimator = QFDashboardPushAnimator()
@@ -22,7 +23,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.avatarContainerView.backgroundColor = UIColor.appBlueColor()
         configNavigationBar()
     }
     
