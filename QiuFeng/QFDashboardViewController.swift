@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate {
+class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate,MWPhotoBrowserDelegate {
 
     @IBOutlet weak var dashboardAvatarImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -29,11 +29,11 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(animated)
-        self.dashboardAvatarImage.layer.cornerRadius = self.dashboardAvatarImage.layer.frame.size.width / 2
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -46,6 +46,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        self.dashboardAvatarImage.layer.cornerRadius = self.dashboardAvatarImage.layer.frame.size.width / 2
+    }
     
     // MARK: - navigation bar
     
@@ -440,5 +444,47 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
             nav.pushViewController(personalViewController, animated: true)
         }
+    }
+    
+    
+    @IBAction func previewButtonPress(sender: UIButton) {
+        if let nav = self.navigationController {
+            let photoBrowser = MWPhotoBrowser(delegate: self)
+            photoBrowser.showNextPhotoAnimated(true)
+            nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
+            nav.pushViewController(photoBrowser, animated: true)
+        }
+    }
+    
+    let photos:[MWPhoto] = {
+        var result:[MWPhoto] = []
+        for i in 0...3 {
+            let path: String? = NSBundle.mainBundle().pathForResource("photo\(i)", ofType: "jpg")
+            if let photoPath = path {
+                let url: NSURL? = NSURL(fileURLWithPath:photoPath)
+                if let photoUrl = url {
+                    result.append(MWPhoto(URL: photoUrl))
+                }
+            }
+        }
+        return result
+    }()
+    
+    //MARK: - MWPhotoBrowser
+    func numberOfPhotosInPhotoBrowser(photoBrowser: MWPhotoBrowser!) -> UInt {
+        return UInt(self.photos.count);
+    }
+    
+    func photoBrowser(photoBrowser: MWPhotoBrowser!, photoAtIndex index: UInt) -> MWPhotoProtocol! {
+        return self.photos[Int(index)]
+    }
+    
+    //MARK: - indicator
+    
+    @IBOutlet weak var page1Indicator: UIView!
+    @IBOutlet weak var page2Indicator: UIView!
+    @IBOutlet weak var page3Indicator: UIView!
+    func setIndicator(page: Int) {
+        
     }
 }

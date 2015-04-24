@@ -3,3 +3,4 @@
 //
 
 #import <POP.h>
+#import <MWPhotoBrowser.h>
