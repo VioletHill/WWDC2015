@@ -19,6 +19,8 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     let pushAnimator = QFDashboardPushAnimator()
     let popAnimator = QFDashboardPopAnimator()
     
+    var needToHideNav: Bool = true
+    
     //MARK: - Life Circle
     
     override func viewDidLoad() {
@@ -30,15 +32,20 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        needToHideNav = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(animated)
-        self.navigationController?.navigationBar.barTintColor = UIColor.appBlueColor()
+        configNavigationBar()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        if needToHideNav {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,6 +62,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     func configNavigationBar() {
         // Hide Status bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.edgesForExtendedLayout = UIRectEdge.None;
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().shadowImage = UIImage()
         self.navigationController?.delegate = self
     }
     
@@ -355,10 +366,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }
     
     func showAnimationAtPage2() {
-       
-        
         if !self.page2View.subviews.contains(self.projectButton) {
-
             
             animationInit()
             
@@ -412,6 +420,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return self.pushAnimator
         }
         else if operation == UINavigationControllerOperation.Pop {
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
             return self.popAnimator
         }
         else {
@@ -453,17 +462,17 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         }
     }
     
+    //MARK : Image
     
     @IBAction func previewButtonPress(sender: UIButton) {
         let imageInfo = JTSImageInfo()
         imageInfo.image = UIImage(named:"photo\(sender.tag)")
-       // let frame = self.view.convertRect(sender.bounds, fromView: sender.superview)
         imageInfo.referenceRect = sender.frame
         imageInfo.referenceView = sender.superview
         imageInfo.referenceContentMode = sender.contentMode
         let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.allZeros | JTSImageViewControllerBackgroundOptions.Blurred)
-        
-        imageViewer.showFromViewController(self, transition: JTSImageViewControllerTransition._FromOriginalPosition)
+        needToHideNav = false
+        imageViewer.showFromViewController(self.navigationController, transition: JTSImageViewControllerTransition._FromOriginalPosition)
     }
     
     //MARK: - indicator

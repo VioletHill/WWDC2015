@@ -45,7 +45,6 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         self.timeNodeLine.setNeedsDisplay()
     }
     
