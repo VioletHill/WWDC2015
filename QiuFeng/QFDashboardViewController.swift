@@ -25,6 +25,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         super.viewDidLoad()
         self.avatarContainerView.backgroundColor = UIColor.appBlueColor()
         configNavigationBar()
+        setIndicator(0)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -56,8 +57,6 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func configNavigationBar() {
         // Hide Status bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        UINavigationBar.appearance().shadowImage = UIImage()
         self.edgesForExtendedLayout = UIRectEdge.None;
         self.navigationController?.delegate = self
     }
@@ -117,7 +116,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         let project = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         project.layer.cornerRadius = self.projectButtonSize / 2
         project.setTitle("Project", forState: UIControlState.Normal)
-        project.backgroundColor = UIColor.appBlueColor()
+        project.backgroundColor = UIColor.appDarkGrayColor()
         project.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         project.addTarget(self, action:"pushToProject:", forControlEvents: UIControlEvents.TouchUpInside)
         return project
@@ -331,7 +330,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         let personal = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         personal.layer.cornerRadius = self.personalButtonSize / 2
         personal.setTitle("Personal", forState: UIControlState.Normal)
-        personal.backgroundColor = UIColor.appDarkGrayColor()
+        personal.backgroundColor = UIColor.appBlueColor()
         personal.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         personal.addTarget(self, action: "pushToPersonal:", forControlEvents: UIControlEvents.TouchUpInside)
         return personal
@@ -396,6 +395,18 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y == 0 {
+            setIndicator(0)
+        }
+        else if scrollView.contentOffset.y == self.view.frame.size.height {
+            setIndicator(1)
+        }
+        else if scrollView.contentOffset.y == self.view.frame.size.height * 2 {
+            setIndicator(2)
+        }
+    }
+    
     
     // MARK: - UIViewControllerAnimatedTransitioning Delegate
     
@@ -417,7 +428,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToProject(sender: UIButton) {
         let projectViewController: QFProjectViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFProjectViewController") as! QFProjectViewController
         if let nav = self.navigationController {
-            nav.navigationBar.barTintColor = UIColor.appBlueColor()
+            nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
             nav.pushViewController(projectViewController, animated: true)
         }
     }
@@ -441,7 +452,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func pushToPersonal(sender: UIButton) {
         let personalViewController: QFPersonalViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFPersonalViewController") as! QFPersonalViewController
         if let nav = self.navigationController {
-            nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
+            nav.navigationBar.barTintColor = UIColor.appBlueColor()
             nav.pushViewController(personalViewController, animated: true)
         }
     }
@@ -451,7 +462,8 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         if let nav = self.navigationController {
             let photoBrowser = MWPhotoBrowser(delegate: self)
             photoBrowser.showNextPhotoAnimated(true)
-            nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
+            photoBrowser.setCurrentPhotoIndex(UInt(sender.tag))
+            nav.navigationBar.barTintColor = UIColor.appBlueColor()
             nav.pushViewController(photoBrowser, animated: true)
         }
     }
@@ -484,7 +496,45 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     @IBOutlet weak var page1Indicator: UIView!
     @IBOutlet weak var page2Indicator: UIView!
     @IBOutlet weak var page3Indicator: UIView!
+    @IBOutlet weak var page1HeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var page2HeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var page3HeightConstraint: NSLayoutConstraint!
     func setIndicator(page: Int) {
-        
+        let currentColor = UIColor(red: 127 / 255, green: 127 / 255, blue: 127 / 255, alpha: 1)
+        let nextColor = UIColor(red: 166 / 255, green: 166 / 255, blue: 166 / 255, alpha: 1)
+        let lastColor = UIColor(red: 204 / 255, green: 204 / 255, blue: 204 / 255, alpha: 1)
+        if page == 0 {
+            self.page1HeightConstraint.constant = 10
+            self.page2HeightConstraint.constant = 8
+            self.page3HeightConstraint.constant = 6
+            self.page1Indicator.layer.cornerRadius = 5.0
+            self.page2Indicator.layer.cornerRadius = 4.0
+            self.page3Indicator.layer.cornerRadius = 3.0
+            self.page1Indicator.backgroundColor = currentColor
+            self.page2Indicator.backgroundColor = nextColor
+            self.page3Indicator.backgroundColor = lastColor
+        }
+        else if page == 1 {
+            self.page1HeightConstraint.constant = 8
+            self.page2HeightConstraint.constant = 10
+            self.page3HeightConstraint.constant = 8
+            self.page1Indicator.layer.cornerRadius = 4.0
+            self.page2Indicator.layer.cornerRadius = 5.0
+            self.page3Indicator.layer.cornerRadius = 4.0
+            self.page1Indicator.backgroundColor = nextColor
+            self.page2Indicator.backgroundColor = currentColor
+            self.page3Indicator.backgroundColor = nextColor
+        }
+        else if page == 2 {
+            self.page1HeightConstraint.constant = 6
+            self.page2HeightConstraint.constant = 8
+            self.page3HeightConstraint.constant = 10
+            self.page1Indicator.layer.cornerRadius = 3.0
+            self.page2Indicator.layer.cornerRadius = 4.0
+            self.page3Indicator.layer.cornerRadius = 5.0
+            self.page1Indicator.backgroundColor = lastColor
+            self.page2Indicator.backgroundColor = nextColor
+            self.page3Indicator.backgroundColor = currentColor
+        }
     }
 }
