@@ -31,7 +31,6 @@
 		F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4C31AE5595C009A8507 /* AppDelegate.swift */; };
 		F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F399D4C71AE5595C009A8507 /* Main.storyboard */; };
 		F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CA1AE5595C009A8507 /* Images.xcassets */; };
-		F399D4CE1AE5595C009A8507 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */; };
 		F399D4DA1AE5595C009A8507 /* QiuFengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4D91AE5595C009A8507 /* QiuFengTests.swift */; };
 		F399D4EA1AE5F2C5009A8507 /* QFDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4E91AE5F2C5009A8507 /* QFDashboardViewController.swift */; };
 		F3D75F9A1AE6095A00F5A66B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D75F991AE6095A00F5A66B /* UIColor+Ext.swift */; };
@@ -76,7 +75,6 @@
 		F399D4C31AE5595C009A8507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F399D4C81AE5595C009A8507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F399D4CA1AE5595C009A8507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F399D4CD1AE5595C009A8507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F399D4D31AE5595C009A8507 /* QiuFengTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiuFengTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F399D4D81AE5595C009A8507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F399D4D91AE5595C009A8507 /* QiuFengTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiuFengTests.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				F399D4C31AE5595C009A8507 /* AppDelegate.swift */,
 				F399D4C71AE5595C009A8507 /* Main.storyboard */,
 				F399D4CA1AE5595C009A8507 /* Images.xcassets */,
-				F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */,
 				F399D4E51AE5F276009A8507 /* QiuFeng-Bridging-Header.h */,
 				F399D4C11AE5595C009A8507 /* Supporting Files */,
 			);
@@ -319,7 +316,6 @@
 				F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */,
 				F38BD9411AEA477000D47D5A /* photo2.jpg in Resources */,
 				F38BD9401AEA477000D47D5A /* photo1.jpg in Resources */,
-				F399D4CE1AE5595C009A8507 /* LaunchScreen.xib in Resources */,
 				F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */,
 				F38BD9421AEA477000D47D5A /* photo3.jpg in Resources */,
 				F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */,
@@ -421,14 +417,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F399D4CC1AE5595C009A8507 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F399D4CD1AE5595C009A8507 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -520,6 +508,7 @@
 			baseConfigurationReference = AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = QiuFeng/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -535,6 +524,7 @@
 			baseConfigurationReference = B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = QiuFeng/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

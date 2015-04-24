@@ -8,112 +8,111 @@
 		<key>month</key>
 		<string>Jan.</string>
 		<key>event</key>
-        <string>Intern of liulishuo.com</string>
+		<string>Intern at liulishuo.com</string>
 	</dict>
-    <dict>
-        <key>year</key>
-        <integer>2014</integer>
-        <key>month</key>
-        <string>Apr.</string>
-        <key>event</key>
-        <string>Intern of eBay</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2014</integer>
-        <key>month</key>
-        <string>Feb.</string>
-        <key>event</key>
-        <string>Volunteer of FTC</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2014</integer>
-        <key>month</key>
-        <string>Jan.</string>
-        <key>event</key>
-        <string>Science And Technology Scholarship of Tongji University</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>Nov.</string>
-        <key>event</key>
-        <string>Volunteer of SAP Future IT Leader Summit 2013</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>Oct.</string>
-        <key>event</key>
-        <string>Training of "Start Your Road at SAP"</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>Sep.</string>
-        <key>event</key>
-        <string>Chairman of Tongji Football Association</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>Sep.</string>
-        <key>event</key>
-        <string>Assistant of "Objective-C Language" Course</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>May.</string>
-        <key>event</key>
-        <string>Volunteer of "Challenge Cup"</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2013</integer>
-        <key>month</key>
-        <string>Apr.</string>
-        <key>event</key>
-        <string>Second Prize of "Programming Contest" in Tongji University</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2012</integer>
-        <key>month</key>
-        <string>Dec.</string>
-        <key>event</key>
-        <string>Silver Prize of "IBM Master the Mainframe Contest China"</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2012</integer>
-        <key>month</key>
-        <string>Nov.</string>
-        <key>event</key>
-        <string>Volunteer of "Challenge Cup"</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2012</integer>
-        <key>month</key>
-        <string>Sep.</string>
-        <key>event</key>
-        <string>Assistant of "C Language" Course</string>
-    </dict>
-    <dict>
-        <key>year</key>
-        <integer>2012</integer>
-        <key>month</key>
-        <string>Apr.</string>
-        <key>event</key>
-        <string>Second Prize of "Programming Contest" In Tongji University</string>
-    </dict>
-
+	<dict>
+		<key>year</key>
+		<integer>2014</integer>
+		<key>month</key>
+		<string>Apr.</string>
+		<key>event</key>
+		<string>Intern at eBay</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2014</integer>
+		<key>month</key>
+		<string>Feb.</string>
+		<key>event</key>
+		<string>Volunteer of FTC</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2014</integer>
+		<key>month</key>
+		<string>Jan.</string>
+		<key>event</key>
+		<string>Science and Technology Scholarship of Tongji University</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>Nov.</string>
+		<key>event</key>
+		<string>Volunteer of SAP Future IT Leader Summit 2013</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>Oct.</string>
+		<key>event</key>
+		<string>Training of &quot;Start Your Road at SAP&quot;</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>Sep.</string>
+		<key>event</key>
+		<string>Chairman of Tongji Football Association</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>Sep.</string>
+		<key>event</key>
+		<string>Assistant of &quot;Objective-C Language&quot; Course</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>May.</string>
+		<key>event</key>
+		<string>Volunteer of &quot;Challenge Cup&quot;</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2013</integer>
+		<key>month</key>
+		<string>Apr.</string>
+		<key>event</key>
+		<string>Second Prize of &quot;Programming Contest&quot; in Tongji University</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2012</integer>
+		<key>month</key>
+		<string>Dec.</string>
+		<key>event</key>
+		<string>Silver Prize of &quot;IBM Master the Mainframe Contest China&quot;</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2012</integer>
+		<key>month</key>
+		<string>Nov.</string>
+		<key>event</key>
+		<string>Volunteer of &quot;Challenge Cup&quot;</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2012</integer>
+		<key>month</key>
+		<string>Sep.</string>
+		<key>event</key>
+		<string>Assistant of &quot;C Language&quot; Course</string>
+	</dict>
+	<dict>
+		<key>year</key>
+		<integer>2012</integer>
+		<key>month</key>
+		<string>Apr.</string>
+		<key>event</key>
+		<string>Second Prize of &quot;Programming Contest&quot; In Tongji University</string>
+	</dict>
 </array>
 </plist>

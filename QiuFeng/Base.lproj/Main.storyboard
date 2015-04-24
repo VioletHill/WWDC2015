@@ -110,8 +110,8 @@
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="dYM-98-6qY" userLabel="Bottom">
                                                 <rect key="frame" x="0.0" y="335" width="600" height="201"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbL-xn-VVe">
-                                                        <rect key="frame" x="257" y="73" width="87" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more about me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbL-xn-VVe">
+                                                        <rect key="frame" x="258" y="73" width="85" height="15"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="2040" y="-189"/>
         </scene>
-        <!--Experience-->
+        <!--EXPERIENCE-->
         <scene sceneID="VOo-AE-uWN">
             <objects>
-                <viewController storyboardIdentifier="QFExperienceViewController" title="Experience" id="0hw-DB-dBj" customClass="QFExperienceViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QFExperienceViewController" title="EXPERIENCE" id="0hw-DB-dBj" customClass="QFExperienceViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2pD-A2-7BV"/>
                         <viewControllerLayoutGuide type="bottom" id="eHT-t4-jUY"/>
@@ -637,7 +637,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Vtl-U9-IeB"/>
+                    <navigationItem key="navigationItem" title="EXPERIENCE" id="Vtl-U9-IeB"/>
                     <connections>
                         <outlet property="avatarImageView" destination="1Yo-zu-5co" id="jbz-bX-55s"/>
                         <outlet property="avatarWidthConstraint" destination="kkm-pV-724" id="MSt-vc-fzF"/>
@@ -654,10 +654,10 @@
             </objects>
             <point key="canvasLocation" x="2040" y="531"/>
         </scene>
-        <!--Skill-->
+        <!--SKILL-->
         <scene sceneID="2hc-nB-76d">
             <objects>
-                <viewController storyboardIdentifier="QFSkillViewController" title="Skill" id="rD7-Sb-xvo" customClass="QFSkillViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QFSkillViewController" title="SKILL" id="rD7-Sb-xvo" customClass="QFSkillViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DpH-er-9xz"/>
                         <viewControllerLayoutGuide type="bottom" id="6Bw-LS-WF3"/>
@@ -933,6 +933,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="SKILL" id="Ubx-DQ-Ipf"/>
                     <connections>
                         <outlet property="htmlLanguage" destination="hXx-Bu-Ls4" id="wCc-l6-KXd"/>
                         <outlet property="javaScriptLanguage" destination="zdu-Hn-DTe" id="tMh-WX-HqU"/>
@@ -949,10 +950,10 @@
             </objects>
             <point key="canvasLocation" x="2040" y="1214"/>
         </scene>
-        <!--Project View Controller-->
+        <!--PROJECT-->
         <scene sceneID="nBZ-pb-eQW">
             <objects>
-                <viewController storyboardIdentifier="QFProjectViewController" id="Oh1-DR-3xu" customClass="QFProjectViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QFProjectViewController" title="PROJECT" id="Oh1-DR-3xu" customClass="QFProjectViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D4B-DY-o8r"/>
                         <viewControllerLayoutGuide type="bottom" id="VtF-cm-sI8"/>
@@ -960,9 +961,86 @@
                     <view key="view" contentMode="scaleToFill" id="qzV-6W-Mju">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ Tongji University, Shanghai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkr-fE-t59">
+                                <rect key="frame" x="219" y="501" width="163" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qQ-wU-rIr">
+                                <rect key="frame" x="255" y="113" width="90" height="310"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbl-Be-V62">
+                                        <rect key="frame" x="0.0" y="220" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="1bh-JR-IyW"/>
+                                            <constraint firstAttribute="height" constant="90" id="g0V-AI-kWx"/>
+                                        </constraints>
+                                        <state key="normal" image="tingyuanLogo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tingyuanIconPress:" destination="Oh1-DR-3xu" eventType="touchUpInside" id="eYH-JZ-fxa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7s-OD-tso">
+                                        <rect key="frame" x="0.0" y="110" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="6l2-qT-Rfu"/>
+                                            <constraint firstAttribute="height" constant="90" id="wRu-xM-HHb"/>
+                                        </constraints>
+                                        <state key="normal" image="snakeLogo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="snakeIconPress:" destination="Oh1-DR-3xu" eventType="touchUpInside" id="aK7-aI-Pls"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlU-95-N9D">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="bOx-FZ-TlG"/>
+                                            <constraint firstAttribute="height" constant="90" id="lQF-12-BpA"/>
+                                        </constraints>
+                                        <state key="normal" image="tjfaLogo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tjfaIconPress:" destination="Oh1-DR-3xu" eventType="touchUpInside" id="s3Z-NJ-YEV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="2Pe-NE-m0D"/>
+                                    <constraint firstAttribute="centerX" secondItem="H7s-OD-tso" secondAttribute="centerX" id="CTc-dJ-rRB"/>
+                                    <constraint firstAttribute="centerX" secondItem="FlU-95-N9D" secondAttribute="centerX" id="V6r-qQ-hKv"/>
+                                    <constraint firstAttribute="width" constant="90" id="bS3-9e-KaI"/>
+                                    <constraint firstItem="FlU-95-N9D" firstAttribute="top" secondItem="7qQ-wU-rIr" secondAttribute="top" id="pQu-nZ-BLN"/>
+                                    <constraint firstAttribute="centerX" secondItem="cbl-Be-V62" secondAttribute="centerX" id="qhj-ob-7WZ"/>
+                                    <constraint firstItem="cbl-Be-V62" firstAttribute="top" secondItem="H7s-OD-tso" secondAttribute="bottom" constant="20" id="tlA-3D-o4Y"/>
+                                    <constraint firstItem="H7s-OD-tso" firstAttribute="top" secondItem="FlU-95-N9D" secondAttribute="bottom" constant="20" id="yUq-gd-4tG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Feng Qiu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeO-JT-Ljc">
+                                <rect key="frame" x="237" y="467" width="127" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7qQ-wU-rIr" secondAttribute="centerY" id="2vH-k4-jhw"/>
+                            <constraint firstAttribute="centerX" secondItem="7qQ-wU-rIr" secondAttribute="centerX" id="7S9-Tw-jhl"/>
+                            <constraint firstItem="Hkr-fE-t59" firstAttribute="centerX" secondItem="qzV-6W-Mju" secondAttribute="centerX" id="TsJ-38-dJE"/>
+                            <constraint firstItem="Hkr-fE-t59" firstAttribute="top" secondItem="FeO-JT-Ljc" secondAttribute="bottom" constant="16" id="dFD-Rv-qc9"/>
+                            <constraint firstItem="FeO-JT-Ljc" firstAttribute="centerX" secondItem="Hkr-fE-t59" secondAttribute="centerX" id="w92-Pf-bxk"/>
+                            <constraint firstAttribute="bottom" secondItem="Hkr-fE-t59" secondAttribute="bottom" constant="20" symbolic="YES" id="wyp-sp-5vS"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rCr-1K-6Qq"/>
+                    <navigationItem key="navigationItem" title="PROJECT" id="rCr-1K-6Qq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLj-f4-o9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1001,5 +1079,8 @@
         <image name="preview1" width="288" height="520"/>
         <image name="preview2" width="288" height="520"/>
         <image name="preview3" width="288" height="520"/>
+        <image name="snakeLogo" width="512" height="512"/>
+        <image name="tingyuanLogo" width="512" height="512"/>
+        <image name="tjfaLogo" width="512" height="512"/>
     </resources>
 </document>
