@@ -68,7 +68,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 120
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 140
+            return 150
         }
         else if DeviceType.IS_IPHONE_6P {
             return 170
@@ -84,10 +84,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 70
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 80
+            return 60
         }
         else if DeviceType.IS_IPHONE_6P {
-            return 80
+            return 70
         }
         
        return 50
@@ -101,10 +101,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 130
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 180
+            return 160
         }
         else if DeviceType.IS_IPHONE_6P {
-            return 180
+            return 170
         }
         return 100
     }()
@@ -140,7 +140,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 140
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 160
+            return 180
         }
         else if DeviceType.IS_IPHONE_6P {
             return 200
@@ -157,10 +157,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 140
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 180
+            return 170
         }
         else if DeviceType.IS_IPHONE_6P {
-            return 185
+            return 175
         }
         return 150
     }()
@@ -173,7 +173,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 200
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 250
+            return 230
         }
         else if DeviceType.IS_IPHONE_6P {
             return 260
@@ -228,10 +228,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 60
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 90
+            return 70
         }
         else if DeviceType.IS_IPHONE_6P {
-            return 95
+            return 85
         }
         return 60
     }()
@@ -296,13 +296,13 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return 180
         }
         else if DeviceType.IS_IPHONE_5 {
-            return 180
+            return 170
         }
         else if DeviceType.IS_IPHONE_6 {
-            return 220
+            return 210
         }
         else if DeviceType.IS_IPHONE_6P {
-            return 225
+            return 215
         }
         return 180
     }()
