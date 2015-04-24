@@ -369,10 +369,10 @@
                         <outlet property="page3HeightConstraint" destination="mwn-9g-Xv6" id="wEB-9s-KrK"/>
                         <outlet property="page3Indicator" destination="uVH-QK-ei4" id="QCG-BO-N3L"/>
                         <outlet property="scrollView" destination="uHm-Rr-vy1" id="O3d-Fs-3LG"/>
-                        <segue destination="Oh1-DR-3xu" kind="show" id="myv-kx-NOt"/>
-                        <segue destination="0hw-DB-dBj" kind="show" id="EmF-XV-YxC"/>
-                        <segue destination="Lwh-Yb-GL2" kind="show" id="9lU-Kl-qPE"/>
-                        <segue destination="rD7-Sb-xvo" kind="show" id="EHP-On-wRP"/>
+                        <segue destination="Oh1-DR-3xu" kind="show" identifier="project" id="myv-kx-NOt"/>
+                        <segue destination="0hw-DB-dBj" kind="show" identifier="experience" id="EmF-XV-YxC"/>
+                        <segue destination="Lwh-Yb-GL2" kind="show" identifier="person" id="9lU-Kl-qPE"/>
+                        <segue destination="rD7-Sb-xvo" kind="show" identifier="skill" id="EHP-On-wRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5C-hA-NfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -390,7 +390,7 @@
                     <view key="view" contentMode="scaleToFill" id="O84-Tu-lGq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tWI-qh-nbl"/>
                 </viewController>
@@ -960,7 +960,7 @@
                     <view key="view" contentMode="scaleToFill" id="qzV-6W-Mju">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.71764705882352942" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="rCr-1K-6Qq"/>
                 </viewController>
@@ -992,23 +992,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kls-Av-ing" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="1038"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Brl-Zp-Y5j">
-            <objects>
-                <viewController id="fP2-zC-dQu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KLj-TI-kFd"/>
-                        <viewControllerLayoutGuide type="bottom" id="pGG-Qd-GW2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ryb-G4-C7t">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UAM-Ve-xh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
