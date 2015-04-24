@@ -1074,7 +1074,7 @@
     </scenes>
     <resources>
         <image name="Oval" width="84" height="84"/>
-        <image name="avatar" width="541" height="541"/>
+        <image name="avatar" width="150" height="150"/>
         <image name="preview0" width="288" height="520"/>
         <image name="preview1" width="288" height="520"/>
         <image name="preview2" width="288" height="520"/>
