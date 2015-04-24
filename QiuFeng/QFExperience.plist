@@ -56,11 +56,11 @@
 		<key>month</key>
 		<string>Sep.</string>
 		<key>event</key>
-		<string>Chairman of Tongji Football Association</string>
+		<string>Chairman of Tongji Soccer Association</string>
 	</dict>
 	<dict>
 		<key>year</key>
-		<integer>2013</integer>
+		<real>2013</real>
 		<key>month</key>
 		<string>Sep.</string>
 		<key>event</key>

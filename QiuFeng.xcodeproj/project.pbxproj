@@ -24,10 +24,6 @@
 		F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */; };
 		F36BBF201AE642C700257658 /* QFDashboardPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */; };
 		F36C6E7E1AE93EB9004A8F43 /* QFSkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C6E7D1AE93EB9004A8F43 /* QFSkillButton.swift */; };
-		F38BD93F1AEA477000D47D5A /* photo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F38BD93B1AEA477000D47D5A /* photo0.jpg */; };
-		F38BD9401AEA477000D47D5A /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F38BD93C1AEA477000D47D5A /* photo1.jpg */; };
-		F38BD9411AEA477000D47D5A /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F38BD93D1AEA477000D47D5A /* photo2.jpg */; };
-		F38BD9421AEA477000D47D5A /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F38BD93E1AEA477000D47D5A /* photo3.jpg */; };
 		F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4C31AE5595C009A8507 /* AppDelegate.swift */; };
 		F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F399D4C71AE5595C009A8507 /* Main.storyboard */; };
 		F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CA1AE5595C009A8507 /* Images.xcassets */; };
@@ -66,10 +62,6 @@
 		F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFPersonalViewController.swift; sourceTree = "<group>"; };
 		F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFDashboardPopAnimator.swift; sourceTree = "<group>"; };
 		F36C6E7D1AE93EB9004A8F43 /* QFSkillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFSkillButton.swift; sourceTree = "<group>"; };
-		F38BD93B1AEA477000D47D5A /* photo0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo0.jpg; sourceTree = "<group>"; };
-		F38BD93C1AEA477000D47D5A /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
-		F38BD93D1AEA477000D47D5A /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
-		F38BD93E1AEA477000D47D5A /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo3.jpg; sourceTree = "<group>"; };
 		F399D4BE1AE5595C009A8507 /* QiuFeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiuFeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F399D4C21AE5595C009A8507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F399D4C31AE5595C009A8507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,10 +121,6 @@
 				F36BBF191AE63EB400257658 /* QFSkillViewController.swift */,
 				F36BBF1B1AE63F4A00257658 /* QFExperienceViewController.swift */,
 				F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */,
-				F38BD93B1AEA477000D47D5A /* photo0.jpg */,
-				F38BD93C1AEA477000D47D5A /* photo1.jpg */,
-				F38BD93D1AEA477000D47D5A /* photo2.jpg */,
-				F38BD93E1AEA477000D47D5A /* photo3.jpg */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -312,12 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38BD93F1AEA477000D47D5A /* photo0.jpg in Resources */,
 				F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */,
-				F38BD9411AEA477000D47D5A /* photo2.jpg in Resources */,
-				F38BD9401AEA477000D47D5A /* photo1.jpg in Resources */,
 				F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */,
-				F38BD9421AEA477000D47D5A /* photo3.jpg in Resources */,
 				F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

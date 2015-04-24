@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate,MWPhotoBrowserDelegate {
+class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var dashboardAvatarImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -30,16 +30,15 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.barTintColor = UIColor.appBlueColor()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,8 +55,6 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     func configNavigationBar() {
         // Hide Status bar
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.edgesForExtendedLayout = UIRectEdge.None;
         self.navigationController?.delegate = self
     }
     
@@ -415,7 +412,6 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             return self.pushAnimator
         }
         else if operation == UINavigationControllerOperation.Pop {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
             return self.popAnimator
         }
         else {
@@ -459,36 +455,13 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     
     @IBAction func previewButtonPress(sender: UIButton) {
-        if let nav = self.navigationController {
-            let photoBrowser = MWPhotoBrowser(delegate: self)
-            photoBrowser.showNextPhotoAnimated(true)
-            photoBrowser.setCurrentPhotoIndex(UInt(sender.tag))
-            nav.navigationBar.barTintColor = UIColor.appBlueColor()
-            nav.pushViewController(photoBrowser, animated: true)
-        }
-    }
-    
-    let photos:[MWPhoto] = {
-        var result:[MWPhoto] = []
-        for i in 0...3 {
-            let path: String? = NSBundle.mainBundle().pathForResource("photo\(i)", ofType: "jpg")
-            if let photoPath = path {
-                let url: NSURL? = NSURL(fileURLWithPath:photoPath)
-                if let photoUrl = url {
-                    result.append(MWPhoto(URL: photoUrl))
-                }
-            }
-        }
-        return result
-    }()
-    
-    //MARK: - MWPhotoBrowser
-    func numberOfPhotosInPhotoBrowser(photoBrowser: MWPhotoBrowser!) -> UInt {
-        return UInt(self.photos.count);
-    }
-    
-    func photoBrowser(photoBrowser: MWPhotoBrowser!, photoAtIndex index: UInt) -> MWPhotoProtocol! {
-        return self.photos[Int(index)]
+        let imageInfo = JTSImageInfo()
+        imageInfo.image = UIImage(named:"photo\(sender.tag)")
+        imageInfo.referenceRect = sender.frame
+        imageInfo.referenceContentMode = sender.contentMode
+        let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.Scaled | JTSImageViewControllerBackgroundOptions.Blurred)
+        
+        imageViewer.showFromViewController(self, transition: JTSImageViewControllerTransition._FromOriginalPosition)
     }
     
     //MARK: - indicator

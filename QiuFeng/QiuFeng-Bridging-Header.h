@@ -3,4 +3,4 @@
 //
 
 #import <POP.h>
-#import <MWPhotoBrowser.h>
+#import <JTSImageViewController.h>
