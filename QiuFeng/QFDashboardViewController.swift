@@ -457,9 +457,11 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     @IBAction func previewButtonPress(sender: UIButton) {
         let imageInfo = JTSImageInfo()
         imageInfo.image = UIImage(named:"photo\(sender.tag)")
+       // let frame = self.view.convertRect(sender.bounds, fromView: sender.superview)
         imageInfo.referenceRect = sender.frame
+        imageInfo.referenceView = sender.superview
         imageInfo.referenceContentMode = sender.contentMode
-        let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.Scaled | JTSImageViewControllerBackgroundOptions.Blurred)
+        let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.allZeros | JTSImageViewControllerBackgroundOptions.Blurred)
         
         imageViewer.showFromViewController(self, transition: JTSImageViewControllerTransition._FromOriginalPosition)
     }
