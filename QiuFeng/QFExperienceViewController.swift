@@ -32,8 +32,11 @@ class QFExperienceViewController: UIViewController, UITableViewDelegate, UITable
         if DeviceType.IS_IPHONE_6P {
             lastCount = 3
         }
-        else {
+        else if DeviceType.IS_IPHONE_4_OR_LESS {
             lastCount = 1
+        }
+        else {
+            lastCount = 2
         }
         
         for i in 1...lastCount {

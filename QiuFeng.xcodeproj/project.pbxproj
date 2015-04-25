@@ -24,6 +24,11 @@
 		F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */; };
 		F36BBF201AE642C700257658 /* QFDashboardPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */; };
 		F36C6E7E1AE93EB9004A8F43 /* QFSkillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36C6E7D1AE93EB9004A8F43 /* QFSkillButton.swift */; };
+		F36E43621AEB3513005F8FD8 /* QFTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E43611AEB3513005F8FD8 /* QFTextViewCell.swift */; };
+		F36E43641AEB3DDE005F8FD8 /* QFHobbyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E43631AEB3DDE005F8FD8 /* QFHobbyCell.swift */; };
+		F36E43661AEB4A2D005F8FD8 /* QFHobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E43651AEB4A2D005F8FD8 /* QFHobby.swift */; };
+		F36E43681AEB5090005F8FD8 /* QFHobby.plist in Resources */ = {isa = PBXBuildFile; fileRef = F36E43671AEB5090005F8FD8 /* QFHobby.plist */; };
+		F36E436A1AEB5180005F8FD8 /* QFHobbyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E43691AEB5180005F8FD8 /* QFHobbyManager.swift */; };
 		F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F399D4C31AE5595C009A8507 /* AppDelegate.swift */; };
 		F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F399D4C71AE5595C009A8507 /* Main.storyboard */; };
 		F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F399D4CA1AE5595C009A8507 /* Images.xcassets */; };
@@ -62,6 +67,11 @@
 		F36BBF1D1AE63FB200257658 /* QFPersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFPersonalViewController.swift; sourceTree = "<group>"; };
 		F36BBF1F1AE642C700257658 /* QFDashboardPopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFDashboardPopAnimator.swift; sourceTree = "<group>"; };
 		F36C6E7D1AE93EB9004A8F43 /* QFSkillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFSkillButton.swift; sourceTree = "<group>"; };
+		F36E43611AEB3513005F8FD8 /* QFTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFTextViewCell.swift; sourceTree = "<group>"; };
+		F36E43631AEB3DDE005F8FD8 /* QFHobbyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFHobbyCell.swift; sourceTree = "<group>"; };
+		F36E43651AEB4A2D005F8FD8 /* QFHobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFHobby.swift; sourceTree = "<group>"; };
+		F36E43671AEB5090005F8FD8 /* QFHobby.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QFHobby.plist; sourceTree = "<group>"; };
+		F36E43691AEB5180005F8FD8 /* QFHobbyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFHobbyManager.swift; sourceTree = "<group>"; };
 		F399D4BE1AE5595C009A8507 /* QiuFeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiuFeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F399D4C21AE5595C009A8507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F399D4C31AE5595C009A8507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,10 +138,13 @@
 		F305B2D61AE7F17A00ED7F73 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F36E43651AEB4A2D005F8FD8 /* QFHobby.swift */,
+				F36E43691AEB5180005F8FD8 /* QFHobbyManager.swift */,
 				F305B2D71AE7F19400ED7F73 /* QFExperience.swift */,
 				F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */,
 				F305B2D91AE7F32800ED7F73 /* QFExperience.plist */,
 				F305B2E71AE8F10F00ED7F73 /* UIDevice+ModelName.swift */,
+				F36E43671AEB5090005F8FD8 /* QFHobby.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -143,6 +156,8 @@
 				F305B2DD1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift */,
 				F305B2EA1AE905D800ED7F73 /* QFPieChart.swift */,
 				F36C6E7D1AE93EB9004A8F43 /* QFSkillButton.swift */,
+				F36E43611AEB3513005F8FD8 /* QFTextViewCell.swift */,
+				F36E43631AEB3DDE005F8FD8 /* QFHobbyCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -302,6 +317,7 @@
 			files = (
 				F399D4C91AE5595C009A8507 /* Main.storyboard in Resources */,
 				F399D4CB1AE5595C009A8507 /* Images.xcassets in Resources */,
+				F36E43681AEB5090005F8FD8 /* QFHobby.plist in Resources */,
 				F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,19 +370,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D75F9A1AE6095A00F5A66B /* UIColor+Ext.swift in Sources */,
+				F36E43661AEB4A2D005F8FD8 /* QFHobby.swift in Sources */,
 				F36BBF1E1AE63FB200257658 /* QFPersonalViewController.swift in Sources */,
 				F305B2DE1AE7FD0200ED7F73 /* QFEexperienceTableViewCell.swift in Sources */,
 				F36BBF161AE6245600257658 /* QFProjectViewController.swift in Sources */,
 				F36C6E7E1AE93EB9004A8F43 /* QFSkillButton.swift in Sources */,
 				F36BBF1C1AE63F4A00257658 /* QFExperienceViewController.swift in Sources */,
+				F36E436A1AEB5180005F8FD8 /* QFHobbyManager.swift in Sources */,
 				F36BBF141AE621AD00257658 /* Array+Ext.swift in Sources */,
 				F399D4C41AE5595C009A8507 /* AppDelegate.swift in Sources */,
+				F36E43621AEB3513005F8FD8 /* QFTextViewCell.swift in Sources */,
 				F36BBF201AE642C700257658 /* QFDashboardPopAnimator.swift in Sources */,
 				F305B2D81AE7F19400ED7F73 /* QFExperience.swift in Sources */,
 				F36BBF1A1AE63EB400257658 /* QFSkillViewController.swift in Sources */,
 				F36BBF181AE6369900257658 /* QFDashboardPushAnimator.swift in Sources */,
 				F305B2E61AE8979800ED7F73 /* QFTimeNodeLine.swift in Sources */,
 				F305B2DC1AE7F5EF00ED7F73 /* QFExperienceManager.swift in Sources */,
+				F36E43641AEB3DDE005F8FD8 /* QFHobbyCell.swift in Sources */,
 				F399D4EA1AE5F2C5009A8507 /* QFDashboardViewController.swift in Sources */,
 				F305B2EB1AE905D800ED7F73 /* QFPieChart.swift in Sources */,
 				F305B2E81AE8F10F00ED7F73 /* UIDevice+ModelName.swift in Sources */,

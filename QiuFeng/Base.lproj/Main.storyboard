@@ -160,7 +160,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Love Soccer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-TA-5uf">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I Love Football" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-TA-5uf">
                                                         <rect key="frame" x="247" y="102" width="106" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,7 +391,6 @@
         <!--PROJECT-->
         <scene sceneID="Ncc-dU-w7e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzy-1p-ZhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QFPersonalViewController" id="Lwh-Yb-GL2" customClass="QFPersonalViewController" customModule="QiuFeng" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2u6-Ob-73P"/>
@@ -401,23 +400,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-9B-q97">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DJa-9B-q97">
                                 <rect key="frame" x="0.0" y="44" width="600" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="KRk-0q-HZp">
+                                    <rect key="frame" x="0.0" y="156" width="600" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="introCell" id="WLa-oI-3Ue">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QFTextViewCell" rowHeight="74" id="WLa-oI-3Ue" customClass="QFTextViewCell" customModule="QiuFeng" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLa-oI-3Ue" id="2c1-TP-qNS">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text=" " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKS-TK-CEw">
+                                                    <rect key="frame" x="20" y="5" width="570" height="64"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DKS-TK-CEw" firstAttribute="leading" secondItem="2c1-TP-qNS" secondAttribute="leading" constant="20" id="HDg-p3-iSo"/>
+                                                <constraint firstItem="DKS-TK-CEw" firstAttribute="top" secondItem="2c1-TP-qNS" secondAttribute="top" constant="5" id="I7h-wA-gbe"/>
+                                                <constraint firstAttribute="bottom" secondItem="DKS-TK-CEw" secondAttribute="bottom" constant="5" id="lYP-cj-BZT"/>
+                                                <constraint firstAttribute="trailing" secondItem="DKS-TK-CEw" secondAttribute="trailing" constant="10" id="yCO-fL-32i"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="introLabel" destination="DKS-TK-CEw" id="X9U-i6-mSS"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="interestedCell" id="0jD-9e-VZ4">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QFHobbyCell" rowHeight="60" id="0jD-9e-VZ4" customClass="QFHobbyCell" customModule="QiuFeng" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0jD-9e-VZ4" id="jSp-zA-ABJ">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coldplay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-Oj-E9F">
+                                                    <rect key="frame" x="20" y="21" width="61" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coldplay" translatesAutoresizingMaskIntoConstraints="NO" id="Fjh-Px-U4o">
+                                                    <rect key="frame" x="550" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="46j-F0-COE"/>
+                                                        <constraint firstAttribute="height" constant="40" id="fbM-Gf-pr8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Fjh-Px-U4o" secondAttribute="centerY" id="CSt-Wz-adB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fjh-Px-U4o" secondAttribute="trailing" constant="10" id="Ihb-SF-399"/>
+                                                <constraint firstItem="kUJ-Oj-E9F" firstAttribute="leading" secondItem="jSp-zA-ABJ" secondAttribute="leading" constant="20" id="b2j-pz-UOb"/>
+                                                <constraint firstAttribute="centerY" secondItem="kUJ-Oj-E9F" secondAttribute="centerY" id="sWf-gl-Iga"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="hobbyLabel" destination="kUJ-Oj-E9F" id="PHb-13-mKO"/>
+                                            <outlet property="imagePath" destination="Fjh-Px-U4o" id="wj6-SC-XeJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -437,6 +491,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="PROJECT" id="tWI-qh-nbl"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzy-1p-ZhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2040" y="-189"/>
         </scene>
@@ -1118,6 +1173,7 @@
         <image name="Oval" width="84" height="84"/>
         <image name="arrow" width="246" height="108"/>
         <image name="avatar" width="150" height="150"/>
+        <image name="coldplay" width="100" height="100"/>
         <image name="preview0" width="288" height="520"/>
         <image name="preview1" width="288" height="520"/>
         <image name="preview2" width="288" height="520"/>
