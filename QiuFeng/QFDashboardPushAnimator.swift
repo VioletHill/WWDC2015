@@ -10,13 +10,13 @@ import UIKit
 
 class QFDashboardPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.8
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let to = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        let from = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let to = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
+        let from = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         
         var fromView: UIView? = nil
         if let toViewController = to as? QFProjectViewController {
@@ -44,18 +44,18 @@ class QFDashboardPushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
         
         if let toView = to?.view {
-            transitionContext.containerView().addSubview(toView)
+            transitionContext.containerView.addSubview(toView)
             to?.view.alpha = 0
         }
         
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { () -> Void in
-                fromView?.transform = CGAffineTransformMakeScale(5.0, 5.0)
+        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: { () -> Void in
+                fromView?.transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
                 to?.view.alpha = 1
             },
             completion: { (finish: Bool) -> Void in
 
-                fromView?.transform = CGAffineTransformIdentity
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                fromView?.transform = CGAffineTransform.identity
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
 }

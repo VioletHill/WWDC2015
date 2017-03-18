@@ -29,7 +29,7 @@ class QFSkillViewController: UIViewController, QFPieChartDelegate {
         pieChart.delegate = self
         
         self.view.backgroundColor = UIColor.appGreenColor()
-        self.pieChart.backgroundColor = UIColor.clearColor()
+        self.pieChart.backgroundColor = UIColor.clear
         
         self.swiftLanguage.percentage = 99
         self.objectiveCLanguage.percentage = 90
@@ -41,7 +41,7 @@ class QFSkillViewController: UIViewController, QFPieChartDelegate {
         adjustConstraint()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         pieChart.startDraw()
         self.swiftLanguage.pieChart.startDraw()
         self.objectiveCLanguage.pieChart.startDraw()
@@ -62,17 +62,17 @@ class QFSkillViewController: UIViewController, QFPieChartDelegate {
     
     //MARK: Line Chart Delegate
 
-    func percentageOfPieChart(pieChart: QFPieChart) -> Int {
+    func percentageOfPieChart(_ pieChart: QFPieChart) -> Int {
         return self.currentSelect.percentage
     }
     
-    func lineWidthOfPieChart(pieChart: QFPieChart) -> CGFloat {
+    func lineWidthOfPieChart(_ pieChart: QFPieChart) -> CGFloat {
         return 5
     }
     
     //MARK: Action
     
-    @IBAction func languagePress(sender: QFSkillButton) {
+    @IBAction func languagePress(_ sender: QFSkillButton) {
         
         setLayoutWithSender(sender)
         self.currentSelect = sender
@@ -95,13 +95,13 @@ class QFSkillViewController: UIViewController, QFPieChartDelegate {
         }
     }
     
-    func setLayoutWithSender(sender: QFSkillButton) {
+    func setLayoutWithSender(_ sender: QFSkillButton) {
         self.swiftLanguage.layer.borderWidth = 0
         self.objectiveCLanguage.layer.borderWidth = 0
         self.javaScriptLanguage.layer.borderWidth = 0
         self.htmlLanguage.layer.borderWidth = 0
         sender.layer.borderWidth = 1
-        sender.layer.borderUIColor = UIColor.whiteColor()
+        sender.layer.borderUIColor = UIColor.white
         
         sender.pieChart.startDraw()
     }

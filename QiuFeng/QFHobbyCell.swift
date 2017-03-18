@@ -13,7 +13,7 @@ class QFHobbyCell: UITableViewCell {
     @IBOutlet weak var hobbyLabel: UILabel!
     @IBOutlet weak var imagePath: UIImageView!
     
-    func setCellWithHobby(hobby: QFHobby) {
+    func setCellWithHobby(_ hobby: QFHobby) {
         self.hobbyLabel.text = hobby.hobby
         self.imagePath.image = UIImage(named: hobby.imagePath!)
     }

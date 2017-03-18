@@ -30,18 +30,18 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         setIndicator(0)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         needToHideNav = true
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         configNavigationBar()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if needToHideNav {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -63,8 +63,8 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     func configNavigationBar() {
         // Hide Status bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.edgesForExtendedLayout = UIRectEdge.None;
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.edgesForExtendedLayout = UIRectEdge();
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         UINavigationBar.appearance().shadowImage = UIImage()
         self.navigationController?.delegate = self
     }
@@ -121,23 +121,24 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }()
     
     lazy var projectButton: UIButton = {
-        let project = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        //let project = UIButton.withType(UIButtonType.system)
+        let project = UIButton(type: .system)
         project.layer.cornerRadius = self.projectButtonSize / 2
-        project.setTitle("Project", forState: UIControlState.Normal)
+        project.setTitle("Project", for: UIControlState())
         project.backgroundColor = UIColor.appDarkGrayColor()
-        project.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        project.addTarget(self, action:"pushToProject:", forControlEvents: UIControlEvents.TouchUpInside)
+        project.setTitleColor(UIColor.white, for: UIControlState())
+        project.addTarget(self, action:#selector(QFDashboardViewController.pushToProject(_:)), for: UIControlEvents.touchUpInside)
         return project
     }()
     
     lazy var projectMoveAnimation: POPSpringAnimation = {
         let springAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
-        springAnimation.fromValue = self.view.frame.size.height
-        springAnimation.toValue = self.projectY
-        springAnimation.springBounciness = 15
-        springAnimation.springSpeed = 20
-        springAnimation.dynamicsTension = 200
-        return springAnimation
+        springAnimation?.fromValue = self.view.frame.size.height
+        springAnimation?.toValue = self.projectY
+        springAnimation?.springBounciness = 15
+        springAnimation?.springSpeed = 20
+        springAnimation?.dynamicsTension = 200
+        return springAnimation!
     }()
     
     
@@ -194,23 +195,24 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }()
     
     lazy var skillButton: UIButton = {
-        let skill = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        //let skill = UIButton.withType(UIButtonType.system)
+        let skill = UIButton(type: .system)
         skill.layer.cornerRadius = self.skillButtonSize / 2
-        skill.setTitle("Skill", forState: UIControlState.Normal)
+        skill.setTitle("Skill", for: UIControlState())
         skill.backgroundColor = UIColor.appGreenColor()
-        skill.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        skill.addTarget(self, action: "pushToSkill:", forControlEvents: UIControlEvents.TouchUpInside)
+        skill.setTitleColor(UIColor.white, for: UIControlState())
+        skill.addTarget(self, action: #selector(QFDashboardViewController.pushToSkill(_:)), for: UIControlEvents.touchUpInside)
         return skill
     }()
     
     lazy var skillMoveAnimation: POPSpringAnimation = {
         let springAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
-        springAnimation.fromValue = self.view.frame.size.height
-        springAnimation.toValue = self.skillY
-        springAnimation.springBounciness = 20
-        springAnimation.springSpeed = 15
-        springAnimation.dynamicsTension = 80
-        return springAnimation
+        springAnimation?.fromValue = self.view.frame.size.height
+        springAnimation?.toValue = self.skillY
+        springAnimation?.springBounciness = 20
+        springAnimation?.springSpeed = 15
+        springAnimation?.dynamicsTension = 80
+        return springAnimation!
     }()
     
     //MARK: - Experience Button
@@ -264,23 +266,24 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }()
     
     lazy var experienceButton: UIButton = {
-       let experience = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+       //let experience = UIButton.withType(UIButtonType.system)
+        let experience = UIButton(type: .system)
         experience.layer.cornerRadius = self.experienceButtonSize / 2
-        experience.setTitle("Experience", forState: UIControlState.Normal)
+        experience.setTitle("Experience", for: UIControlState())
         experience.backgroundColor = UIColor.appOrangeColor()
-        experience.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        experience.addTarget(self, action: "pushToExperience:", forControlEvents: UIControlEvents.TouchUpInside)
+        experience.setTitleColor(UIColor.white, for: UIControlState())
+        experience.addTarget(self, action: #selector(QFDashboardViewController.pushToExperience(_:)), for: UIControlEvents.touchUpInside)
         return experience
     }()
     
     lazy var experienceMoveAnimation: POPSpringAnimation = {
         let springAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
-        springAnimation.fromValue = self.view.frame.size.height
-        springAnimation.toValue = self.experienceY
-        springAnimation.springBounciness = 20
-        springAnimation.springSpeed = 15
-        springAnimation.dynamicsTension = 200
-        return springAnimation
+        springAnimation?.fromValue = self.view.frame.size.height
+        springAnimation?.toValue = self.experienceY
+        springAnimation?.springBounciness = 20
+        springAnimation?.springSpeed = 15
+        springAnimation?.dynamicsTension = 200
+        return springAnimation!
     }()
     
     //MARK: - Personal
@@ -335,23 +338,24 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }()
     
     lazy var personalButton: UIButton = {
-        let personal = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        //let personal = UIButton.withType(UIButtonType.system)
+        let personal = UIButton(type: .system)
         personal.layer.cornerRadius = self.personalButtonSize / 2
-        personal.setTitle("Personal", forState: UIControlState.Normal)
+        personal.setTitle("Personal", for: UIControlState())
         personal.backgroundColor = UIColor.appBlueColor()
-        personal.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        personal.addTarget(self, action: "pushToPersonal:", forControlEvents: UIControlEvents.TouchUpInside)
+        personal.setTitleColor(UIColor.white, for: UIControlState())
+        personal.addTarget(self, action: #selector(QFDashboardViewController.pushToPersonal(_:)), for: UIControlEvents.touchUpInside)
         return personal
     }()
     
     lazy var personalMoveAnimation: POPSpringAnimation = {
         let springAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
-        springAnimation.fromValue = self.view.frame.size.height
-        springAnimation.toValue = self.personalY
-        springAnimation.springBounciness = 20
-        springAnimation.springSpeed = 14
-        springAnimation.dynamicsTension = 230
-        return springAnimation
+        springAnimation?.fromValue = self.view.frame.size.height
+        springAnimation?.toValue = self.personalY
+        springAnimation?.springBounciness = 20
+        springAnimation?.springSpeed = 14
+        springAnimation?.dynamicsTension = 230
+        return springAnimation!
     }()
     
     func animationInit() {
@@ -359,10 +363,10 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         self.experienceMoveAnimation.beginTime = CACurrentMediaTime() + 0.2
         self.personalMoveAnimation.beginTime = CACurrentMediaTime() + 0.4
         
-        self.projectButton.frame = CGRectMake(self.projectButtonX, self.view.frame.size.height, self.projectButtonSize, self.projectButtonSize)
-        self.skillButton.frame = CGRectMake(self.skillButtonX, self.view.frame.size.height, self.skillButtonSize, self.skillButtonSize)
-        self.experienceButton.frame = CGRectMake(self.experienceX, self.view.frame.size.height, self.experienceButtonSize, self.experienceButtonSize)
-        self.personalButton.frame = CGRectMake(self.personalX, self.view.frame.size.height, self.personalButtonSize, self.personalButtonSize)
+        self.projectButton.frame = CGRect(x: self.projectButtonX, y: self.view.frame.size.height, width: self.projectButtonSize, height: self.projectButtonSize)
+        self.skillButton.frame = CGRect(x: self.skillButtonX, y: self.view.frame.size.height, width: self.skillButtonSize, height: self.skillButtonSize)
+        self.experienceButton.frame = CGRect(x: self.experienceX, y: self.view.frame.size.height, width: self.experienceButtonSize, height: self.experienceButtonSize)
+        self.personalButton.frame = CGRect(x: self.personalX, y: self.view.frame.size.height, width: self.personalButtonSize, height: self.personalButtonSize)
     }
     
     func showAnimationAtPage2() {
@@ -371,16 +375,16 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
             animationInit()
             
             self.page2View.addSubview(self.projectButton)
-            self.projectButton.pop_addAnimation(self.projectMoveAnimation, forKey:"projectAnimation")
+            self.projectButton.pop_add(self.projectMoveAnimation, forKey:"projectAnimation")
         
             self.page2View.addSubview(self.skillButton)
-            self.skillButton.pop_addAnimation(self.skillMoveAnimation, forKey: "skillAnimation")
+            self.skillButton.pop_add(self.skillMoveAnimation, forKey: "skillAnimation")
         
             self.page2View.addSubview(self.experienceButton)
-            self.experienceButton.pop_addAnimation(self.experienceMoveAnimation, forKey: "experienceButtonAnimation")
+            self.experienceButton.pop_add(self.experienceMoveAnimation, forKey: "experienceButtonAnimation")
         
             self.page2View.addSubview(self.personalButton)
-            self.personalButton.pop_addAnimation(self.personalMoveAnimation, forKey: "personalAnimation")
+            self.personalButton.pop_add(self.personalMoveAnimation, forKey: "personalAnimation")
         }
     }
     
@@ -391,7 +395,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     }
     
     // MARK: - ScrollView Delegate
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y == self.view.frame.size.height {
             showAnimationAtPage2()
         }
@@ -400,7 +404,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
         }
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y == 0 {
             setIndicator(0)
         }
@@ -415,11 +419,11 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     // MARK: - UIViewControllerAnimatedTransitioning Delegate
     
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == UINavigationControllerOperation.Push {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == UINavigationControllerOperation.push {
             return self.pushAnimator
         }
-        else if operation == UINavigationControllerOperation.Pop {
+        else if operation == UINavigationControllerOperation.pop {
             self.navigationController?.setNavigationBarHidden(true, animated: false)
             return self.popAnimator
         }
@@ -430,32 +434,32 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     
     // MARK: - UIActionEvent
-    func pushToProject(sender: UIButton) {
-        let projectViewController: QFProjectViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFProjectViewController") as! QFProjectViewController
+    func pushToProject(_ sender: UIButton) {
+        let projectViewController: QFProjectViewController = self.storyboard?.instantiateViewController(withIdentifier: "QFProjectViewController") as! QFProjectViewController
         if let nav = self.navigationController {
             nav.navigationBar.barTintColor = UIColor.appDarkGrayColor()
             nav.pushViewController(projectViewController, animated: true)
         }
     }
     
-    func pushToSkill(sender: UIButton) {
-        let skillViewController: QFSkillViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFSkillViewController") as! QFSkillViewController
+    func pushToSkill(_ sender: UIButton) {
+        let skillViewController: QFSkillViewController = self.storyboard?.instantiateViewController(withIdentifier: "QFSkillViewController") as! QFSkillViewController
         if let nav = self.navigationController {
             nav.navigationBar.barTintColor = UIColor.appGreenColor()
             nav.pushViewController(skillViewController, animated: true)
         }
     }
     
-    func pushToExperience(sender: UIButton) {
-        let experienceViewController: QFExperienceViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFExperienceViewController") as! QFExperienceViewController
+    func pushToExperience(_ sender: UIButton) {
+        let experienceViewController: QFExperienceViewController = self.storyboard?.instantiateViewController(withIdentifier: "QFExperienceViewController") as! QFExperienceViewController
         if let nav = self.navigationController {
             nav.navigationBar.barTintColor = UIColor.appOrangeColor()
             nav.pushViewController(experienceViewController, animated: true)
         }
     }
     
-    func pushToPersonal(sender: UIButton) {
-        let personalViewController: QFPersonalViewController = self.storyboard?.instantiateViewControllerWithIdentifier("QFPersonalViewController") as! QFPersonalViewController
+    func pushToPersonal(_ sender: UIButton) {
+        let personalViewController: QFPersonalViewController = self.storyboard?.instantiateViewController(withIdentifier: "QFPersonalViewController") as! QFPersonalViewController
         if let nav = self.navigationController {
             nav.navigationBar.barTintColor = UIColor.appBlueColor()
             nav.pushViewController(personalViewController, animated: true)
@@ -464,15 +468,16 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     
     //MARK : Image
     
-    @IBAction func previewButtonPress(sender: UIButton) {
+    @IBAction func previewButtonPress(_ sender: UIButton) {
         let imageInfo = JTSImageInfo()
         imageInfo.image = UIImage(named:"photo\(sender.tag)")
         imageInfo.referenceRect = sender.frame
         imageInfo.referenceView = sender.superview
         imageInfo.referenceContentMode = sender.contentMode
-        let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.allZeros | JTSImageViewControllerBackgroundOptions.Blurred)
+        let imageViewer: JTSImageViewController = JTSImageViewController(imageInfo: imageInfo, mode: JTSImageViewControllerMode.image, backgroundStyle: JTSImageViewControllerBackgroundOptions.blurred)
         needToHideNav = false
-        imageViewer.showFromViewController(self.navigationController, transition: JTSImageViewControllerTransition._FromOriginalPosition)
+//        imageViewer.showFromViewController(self.navigationController, transition: JTSImageViewControllerTransition.fromOriginalPosition)
+        imageViewer.show(from: self.navigationController, transition: JTSImageViewControllerTransition.fromOriginalPosition)
     }
     
     //MARK: - indicator
@@ -483,7 +488,7 @@ class QFDashboardViewController: UIViewController, UIScrollViewDelegate, UINavig
     @IBOutlet weak var page1HeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var page2HeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var page3HeightConstraint: NSLayoutConstraint!
-    func setIndicator(page: Int) {
+    func setIndicator(_ page: Int) {
         let currentColor = UIColor(red: 127 / 255, green: 127 / 255, blue: 127 / 255, alpha: 1)
         let nextColor = UIColor(red: 166 / 255, green: 166 / 255, blue: 166 / 255, alpha: 1)
         let lastColor = UIColor(red: 204 / 255, green: 204 / 255, blue: 204 / 255, alpha: 1)

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A59CA9D4CF68CF370CF30C12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6817DFD0D4FE5D283458D75 /* libPods.a */; };
+		CA843B949FD5EFB0A4C5E848 /* libPods-QiuFeng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF10E5D12EF71028839C92CD /* libPods-QiuFeng.a */; };
 		F305B2D81AE7F19400ED7F73 /* QFExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2D71AE7F19400ED7F73 /* QFExperience.swift */; };
 		F305B2DA1AE7F32800ED7F73 /* QFExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = F305B2D91AE7F32800ED7F73 /* QFExperience.plist */; };
 		F305B2DC1AE7F5EF00ED7F73 /* QFExperienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */; };
@@ -48,9 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D6817DFD0D4FE5D283458D75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF2D76CCD153DC1B24D8FE0 /* Pods-QiuFeng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiuFeng.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiuFeng/Pods-QiuFeng.release.xcconfig"; sourceTree = "<group>"; };
+		8F4A03932ACFF7D6110A2966 /* Pods-QiuFeng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiuFeng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiuFeng/Pods-QiuFeng.debug.xcconfig"; sourceTree = "<group>"; };
+		AF10E5D12EF71028839C92CD /* libPods-QiuFeng.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QiuFeng.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F305B2D71AE7F19400ED7F73 /* QFExperience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFExperience.swift; sourceTree = "<group>"; };
 		F305B2D91AE7F32800ED7F73 /* QFExperience.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QFExperience.plist; sourceTree = "<group>"; };
 		F305B2DB1AE7F5EF00ED7F73 /* QFExperienceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QFExperienceManager.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59CA9D4CF68CF370CF30C12 /* libPods.a in Frameworks */,
+				CA843B949FD5EFB0A4C5E848 /* libPods-QiuFeng.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,21 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90EF3FF7AFFF31569038587B /* Frameworks */ = {
+		5A327E0EBA1D239816EBB5BC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6817DFD0D4FE5D283458D75 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CC8F09710C14A88803D58922 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */,
-				B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */,
+				8F4A03932ACFF7D6110A2966 /* Pods-QiuFeng.debug.xcconfig */,
+				1FF2D76CCD153DC1B24D8FE0 /* Pods-QiuFeng.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B732E76B75977D56C91BB545 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF10E5D12EF71028839C92CD /* libPods-QiuFeng.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F305B2D51AE7F16900ED7F73 /* Controller */ = {
@@ -178,8 +178,8 @@
 				F399D4C01AE5595C009A8507 /* QiuFeng */,
 				F399D4D61AE5595C009A8507 /* QiuFengTests */,
 				F399D4BF1AE5595C009A8507 /* Products */,
-				CC8F09710C14A88803D58922 /* Pods */,
-				90EF3FF7AFFF31569038587B /* Frameworks */,
+				5A327E0EBA1D239816EBB5BC /* Pods */,
+				B732E76B75977D56C91BB545 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,11 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F399D4DD1AE5595C009A8507 /* Build configuration list for PBXNativeTarget "QiuFeng" */;
 			buildPhases = (
-				B893D8C21507AA0D9BF98A1D /* Check Pods Manifest.lock */,
+				1B6DE30F6ED42A95B4211060 /* [CP] Check Pods Manifest.lock */,
 				F399D4BA1AE5595C009A8507 /* Sources */,
 				F399D4BB1AE5595C009A8507 /* Frameworks */,
 				F399D4BC1AE5595C009A8507 /* Resources */,
-				8DDFECB1B94A0B10683385D8 /* Copy Pods Resources */,
+				AD5854D42E246CDD653C9497 /* [CP] Embed Pods Frameworks */,
+				322C886E1CDCFB40D597D5C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,9 +286,11 @@
 					F399D4BD1AE5595C009A8507 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = YPE39BAJY9;
+						LastSwiftMigration = 0820;
 					};
 					F399D4D21AE5595C009A8507 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = F399D4BD1AE5595C009A8507;
 					};
 				};
@@ -333,34 +336,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DDFECB1B94A0B10683385D8 /* Copy Pods Resources */ = {
+		1B6DE30F6ED42A95B4211060 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B893D8C21507AA0D9BF98A1D /* Check Pods Manifest.lock */ = {
+		322C886E1CDCFB40D597D5C4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QiuFeng/Pods-QiuFeng-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5854D42E246CDD653C9497 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QiuFeng/Pods-QiuFeng-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -510,7 +528,7 @@
 		};
 		F399D4DE1AE5595C009A8507 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB617EDBF0D47A077333D641 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8F4A03932ACFF7D6110A2966 /* Pods-QiuFeng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -522,12 +540,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QiuFeng/QiuFeng-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F399D4DF1AE5595C009A8507 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B25E6E0EC6862D0B70F83EBC /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1FF2D76CCD153DC1B24D8FE0 /* Pods-QiuFeng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -538,6 +557,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QiuFeng/QiuFeng-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -557,6 +577,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiuFeng.app/QiuFeng";
 			};
 			name = Debug;
@@ -573,6 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiuFeng.app/QiuFeng";
 			};
 			name = Release;

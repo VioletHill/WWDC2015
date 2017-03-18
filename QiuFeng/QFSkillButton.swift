@@ -18,11 +18,11 @@ class QFSkillButton: UIControl, QFPieChartDelegate {
         pieChart.delegate = self
     }
     
-    func percentageOfPieChart(pieChart: QFPieChart) -> Int {
+    func percentageOfPieChart(_ pieChart: QFPieChart) -> Int {
         return self.percentage
     }
     
-    func lineWidthOfPieChart(pieChart: QFPieChart) -> CGFloat {
+    func lineWidthOfPieChart(_ pieChart: QFPieChart) -> CGFloat {
         return 3
     }
 }

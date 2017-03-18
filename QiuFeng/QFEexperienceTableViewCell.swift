@@ -17,36 +17,36 @@ class QFEexperienceTableViewCell: UITableViewCell {
     @IBOutlet weak var timeNodeLime: UIView!
     
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-//        if keyPath == "alpha" {
-//            setTimeNodeAlpha(alpha)
-//        }
-    }
+//    override func observeValue(forKeyPath keyPath: String, of object: Any, change: [AnyHashable: Any], context: UnsafeMutableRawPointer) {
+////        if keyPath == "alpha" {
+////            setTimeNodeAlpha(alpha)
+////        }
+//    }
     
     override func awakeFromNib() {
       //  self.addObserver(self, forKeyPath: "alpha", options: NSKeyValueObservingOptions.New, context: nil)
     }
     
-    func setCellWithExperience(experience: QFExperience) {
+    func setCellWithExperience(_ experience: QFExperience) {
         if experience.year == 0 {
-            timeNode.hidden = true
+            timeNode.isHidden = true
         }
         else {
-            timeNode.hidden = false
+            timeNode.isHidden = false
         }
         monthLabel.text = experience.month
         eventLabel.text = experience.event
     }
     
-    func setCellAlpha(alpha: CGFloat) {
+    func setCellAlpha(_ alpha: CGFloat) {
         let alphaValue = max(0, alpha)
         self.monthLabel.alpha = alphaValue
         self.eventLabel.alpha = alphaValue
-        self.monthLabel.font = UIFont.boldSystemFontOfSize(14 + alpha * 4);
+        self.monthLabel.font = UIFont.boldSystemFont(ofSize: 14 + alpha * 4);
         setTimeNodeAlpha(alphaValue)
     }
     
-    func setTimeNodeAlpha(alpha: CGFloat) {
+    func setTimeNodeAlpha(_ alpha: CGFloat) {
         //255 123 35
         let color = UIColor(red: ((255-255)*alpha+255)/255, green: ((123-255)*alpha+255)/255, blue: ((35-255)*alpha+255)/255 , alpha: alpha)
         self.timeNode.backgroundColor = color

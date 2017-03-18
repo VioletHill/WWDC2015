@@ -16,7 +16,7 @@ class QFExperienceManager: NSObject {
         return manager
     }
     
-    func splitExperienceByYear(experiences: [QFExperience]) ->[[QFExperience]] {
+    func splitExperienceByYear(_ experiences: [QFExperience]) ->[[QFExperience]] {
         var oneYearExperience: [QFExperience]? = nil
         
         var result: [[QFExperience]] = []
@@ -36,7 +36,7 @@ class QFExperienceManager: NSObject {
     }
     
     func getExperience() -> [[QFExperience]] {
-        let path = NSBundle.mainBundle().pathForResource("QFExperience", ofType: "plist")
+        let path = Bundle.main.path(forResource: "QFExperience", ofType: "plist")
         let data = NSArray(contentsOfFile: path!) as! [ [String : AnyObject] ]
         
         var result: [QFExperience] = []

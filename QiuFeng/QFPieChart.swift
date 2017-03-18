@@ -9,8 +9,8 @@
 import UIKit
 
 protocol QFPieChartDelegate {
-    func percentageOfPieChart(pieChart: QFPieChart) -> Int
-    func lineWidthOfPieChart(pieChart: QFPieChart) -> CGFloat
+    func percentageOfPieChart(_ pieChart: QFPieChart) -> Int
+    func lineWidthOfPieChart(_ pieChart: QFPieChart) -> CGFloat
 }
 
 class QFPieChart: UIView {
@@ -20,7 +20,7 @@ class QFPieChart: UIView {
     var drawCount = 0
     var delegate: QFPieChartDelegate?
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
        // if let delegate
         if delegate == nil {
@@ -30,18 +30,20 @@ class QFPieChart: UIView {
         let context = UIGraphicsGetCurrentContext()
         let width = self.delegate?.lineWidthOfPieChart(self)
         if let lineWidth = width {
-            CGContextSetLineWidth(context, lineWidth)
+            context?.setLineWidth(lineWidth)
         }
         else {
-            CGContextSetLineWidth(context, 1)
+            context?.setLineWidth(1)
         }
-        UIColor.whiteColor().set()
+        UIColor.white.set()
         
         let percentage = delegate?.percentageOfPieChart(self)
+    
         let drawPercentage = Float(drawCount) / Float(totalDrawCount) * Float(percentage!) / 100
-        CGContextAddArc(context, (frame.size.width)/2, frame.size.height/2, (frame.size.width - 10)/2, CGFloat(-M_PI / 6), CGFloat(M_PI * 2) * CGFloat(100-drawPercentage) - CGFloat(M_PI/6), 1)
+        context?.addArc(center:CGPoint(x: (frame.size.width)/2, y: frame.size.height/2) , radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI / 6), endAngle: CGFloat(M_PI * 2) * CGFloat(100-drawPercentage) - CGFloat(M_PI/6), clockwise: true)
+//        CGContextAddArc(context, (frame.size.width)/2, frame.size.height/2, (frame.size.width - 10)/2, CGFloat(-M_PI / 6), CGFloat(M_PI * 2) * CGFloat(100-drawPercentage) - CGFloat(M_PI/6), 1)
         
-        CGContextStrokePath(context);
+        context?.strokePath();
     }
     
     func draw() {
@@ -51,8 +53,8 @@ class QFPieChart: UIView {
         }
         else {
             setNeedsDisplay()
-            let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(Float(NSEC_PER_SEC) * animationDuration / Float(totalDrawCount)))
-            dispatch_after(time, dispatch_get_main_queue(), { ()-> Void in
+            let time: DispatchTime = DispatchTime.now() + Double(Int64(Float(NSEC_PER_SEC) * animationDuration / Float(totalDrawCount))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: time, execute: { ()-> Void in
                 self.draw()
             });
         }

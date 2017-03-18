@@ -15,7 +15,7 @@ class QFHobbyManager: NSObject {
     }
     
     func getHobby() -> [QFHobby] {
-        let path = NSBundle.mainBundle().pathForResource("QFHobby", ofType: "plist")
+        let path = Bundle.main.path(forResource: "QFHobby", ofType: "plist")
         let data = NSArray(contentsOfFile: path!) as! [ [String: String] ]
         
         var result: [QFHobby] = []

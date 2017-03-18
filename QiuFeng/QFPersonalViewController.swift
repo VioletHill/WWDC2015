@@ -17,11 +17,11 @@ class QFPersonalViewController: UIViewController, UITableViewDelegate, UITableVi
         self.view.backgroundColor = UIColor.appBlueColor()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         }
@@ -30,11 +30,11 @@ class QFPersonalViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 22.0
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "INTRO"
         }
@@ -43,9 +43,9 @@ class QFPersonalViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            let cell: QFTextViewCell = tableView.dequeueReusableCellWithIdentifier("QFTextViewCell") as! QFTextViewCell
+            let cell: QFTextViewCell = tableView.dequeueReusableCell(withIdentifier: "QFTextViewCell") as! QFTextViewCell
             return cell.heightForText(introText)
         }
         else {
@@ -53,17 +53,17 @@ class QFPersonalViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell: QFTextViewCell = tableView.dequeueReusableCellWithIdentifier("QFTextViewCell") as! QFTextViewCell
+            let cell: QFTextViewCell = tableView.dequeueReusableCell(withIdentifier: "QFTextViewCell") as! QFTextViewCell
             cell.introLabel.text = introText
-            cell.introLabel?.font = UIFont.systemFontOfSize(16)
-            cell.introLabel?.textColor = UIColor.whiteColor()
+            cell.introLabel?.font = UIFont.systemFont(ofSize: 16)
+            cell.introLabel?.textColor = UIColor.white
 
             return cell
         }
         else {
-            let cell: QFHobbyCell = tableView.dequeueReusableCellWithIdentifier("QFHobbyCell") as! QFHobbyCell!
+            let cell: QFHobbyCell = tableView.dequeueReusableCell(withIdentifier: "QFHobbyCell") as! QFHobbyCell!
             cell.setCellWithHobby(data[indexPath.row])
             return cell
         }

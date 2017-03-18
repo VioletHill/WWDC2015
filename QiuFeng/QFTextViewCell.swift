@@ -13,11 +13,11 @@ class QFTextViewCell: UITableViewCell {
 
     @IBOutlet weak var introLabel: UITextView!
     
-    func heightForText(str: String)-> CGFloat {
+    func heightForText(_ str: String)-> CGFloat {
         self.introLabel.text = str
-        self.introLabel?.font = UIFont.systemFontOfSize(16)
-        self.introLabel?.textColor = UIColor.whiteColor()
-        let size = self.introLabel.sizeThatFits(CGSizeMake(UIScreen.mainScreen().bounds.width - 20, CGFloat(FLT_MAX)))
+        self.introLabel?.font = UIFont.systemFont(ofSize: 16)
+        self.introLabel?.textColor = UIColor.white
+        let size = self.introLabel.sizeThatFits(CGSize(width: UIScreen.main.bounds.width - 20, height: CGFloat(FLT_MAX)))
         return size.height
     }
     
